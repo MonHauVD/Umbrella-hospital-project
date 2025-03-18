@@ -26,20 +26,31 @@
             //SMTP::DEBUG_CLIENT = client messages
             //SMTP::DEBUG_SERVER = client and server messages
             // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+            // $mail->SMTPDebug = 2;
             //Set the hostname of the mail server
-            $mail->SMTPSecure = 'ssl'; 
+            // $mail->SMTPSecure = 'ssl'; 
+            // $mail->SMTPSecure = 'tls'; 
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Host = "smtp.gmail.com";
-            $mail->Port = 465; 
+            $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true,
+                ),
+            );
+            // $mail->Host = gethostbyname('smtp.gmail.com');
+            $mail->Port = 587; 
             //Whether to use SMTP authentication
             $mail->SMTPAuth = true;
             //Username to use for SMTP authentication
-            $mail->Username = 'phongkaster@gmail.com';
+            $mail->Username = 'resetmypassvd@gmail.com';
             //Password to use for SMTP authentication
-            $mail->Password = 'pmyicteoyfutbgzz';
+            $mail->Password = 'oshtwosaeoeyevqq';
             //Set who the message is to be sent from
-            $mail->setFrom('phongkaster@gmail.com', TITLE);
+            $mail->setFrom('resetmypassvd@gmail.com', TITLE);
             //Set an alternative reply-to address
-            $mail->addReplyTo('phongkaster@gmail.com', TITLE);
+            $mail->addReplyTo('resetmypassvd@gmail.com', TITLE);
             $mail->isHTML();
 
             $mail->CharSet = "UTF-8";

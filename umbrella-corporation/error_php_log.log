@@ -1741,3 +1741,11 @@ Stack trace:
 [22-Dec-2022 09:47:39 UTC] PHP Notice:  Undefined variable: doctorId in D:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 167
 [23-Dec-2022 05:07:47 UTC] PHP Notice:  Undefined variable: serviceId in D:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 166
 [23-Dec-2022 05:07:47 UTC] PHP Notice:  Undefined variable: doctorId in D:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 167
+[16-Mar-2025 18:35:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=ne...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\ve in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138

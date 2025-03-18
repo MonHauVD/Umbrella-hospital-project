@@ -1305,3 +1305,81 @@ Stack trace:
 #3 D:\Data of Program file\xampp\htdocs\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
 #4 D:\Data of Program file\xampp\htdocs\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\ConnectionAdapters\Mysql->doConnect(Array)
 #5 D:\Data of Program file\xampp\htdocs\api\app\vendor\usmanhalalit\pixie\src\Pixie\Connection.php(93): Pixie\Connect in D:\Data of Program file\xampp\htdocs\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[17-Mar-2025 00:06:54 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:07:06 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:07:20 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:07:47 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:07:52 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:08:38 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:08:50 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:09:28 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:09:42 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:10:03 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:14:15 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:14:25 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:14:36 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:14:47 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:22:47 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:22:53 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:22:58 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:23:16 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:23:37 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:23:48 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 00:24:08 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[17-Mar-2025 01:34:51 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=do...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\Conne in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[17-Mar-2025 01:34:51 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=do...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\Conne in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[17-Mar-2025 01:34:57 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=do...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\Conne in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[17-Mar-2025 01:35:01 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=do...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\Conne in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[17-Mar-2025 01:35:03 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=do...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\Conne in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[17-Mar-2025 01:35:25 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=do...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\Conne in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[18-Mar-2025 23:57:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\helpers\email.helper.php:28
+Stack trace:
+#0 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\helpers\email.helper.php(97): MyEmail::setupMail()
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\SignupController.php(172): MyEmail::signup(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\SignupController.php(23): SignupController->signup()
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php(613): SignupController->process()
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php(72): App->process()
+#5 {main}
+  thrown in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\helpers\email.helper.php on line 28

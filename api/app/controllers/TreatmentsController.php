@@ -212,6 +212,7 @@
 
             /**Step 4.3 - is appointment's date today? 
              * If no, this appointment can not be changed ! */
+            date_default_timezone_set('Asia/Ho_Chi_Minh');
             $today = Date("d-m-Y");
             $appointment_date = $Appointment->get("date");
             
