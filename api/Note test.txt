@@ -1,0 +1,13 @@
+./vendor/bin/phpunit tests/CartTest.php --color
+./vendor/bin/phpunit tests/ExampleTest.php --color
+
+
+./vendor/bin/phpunit tests/ExampleTestUsingAutoLoad.php --testdox
+
+# load lai autoload
+composer dump-autoload -o
+
+--color: in mau bao loi
+--testdox: thong bao loi ro hon
+
+./vendor/bin/phpunit tests/Models/DoctorModelTest.php --color

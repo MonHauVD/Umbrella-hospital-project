@@ -6,7 +6,6 @@
 	 * @author Onelab <hello@onelab.co> 
 	 * 
 	 */
-	
 	class DoctorModel extends DataEntry
 	{	
 		/**
