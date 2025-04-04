@@ -1,5 +1,5 @@
 ./vendor/bin/phpunit tests/CartTest.php --color
-./vendor/bin/phpunit tests/ExampleTest.php --color
+./vendor/bin/phpunit tests/thu_nghiem/ExampleTest.php --color
 
 
 ./vendor/bin/phpunit tests/ExampleTestUsingAutoLoad.php --testdox
@@ -9,6 +9,20 @@ composer dump-autoload -o
 
 --color: in mau bao loi
 --testdox: thong bao loi ro hon
+# Muốn in ra trong hàm test không bị ricky
+fwrite(STDERR, var_export($resp, true)); //Trích xuất biến
+fwrite(STDERR, "Đây là câu, muốn in ra\n");
 
 ./vendor/bin/phpunit tests/Models/DoctorModelTest.php --color
 ./vendor/bin/phpunit tests/Models/DoctorModelTest3.php --color
+./vendor/bin/phpunit tests/Module_10/Models/DoctorModelTest4.php --color
+
+./vendor/bin/phpunit tests/Module_10/Models/DoctorModelTest.php
+./vendor/bin/phpunit tests/Module_10/Controler/APIDoctorsControllerTest.php
+
+./vendor/bin/phpunit tests/Module_10/Controler/DoctorControllerTest.php
+
+__set_state
+(
+    array('data' =>array (), 'is_available' => false,)
+)

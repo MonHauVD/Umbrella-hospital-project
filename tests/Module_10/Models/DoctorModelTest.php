@@ -1,151 +1,162 @@
 <?php
-
-// namespace App\Tests\Models;
-// use App\Models\DoctorModel; 
-// use App\Core\DataEntry;
-use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\TestCase;
-// use PDO;
-
+use Pixie\Connection;
+use Pixie\QueryBuilder\QueryBuilderHandler;
 
 
 require_once __DIR__ . '/../../../api/app/core/DataEntry.php';
+require_once __DIR__ . '/../../../api/app/core/Controller.php';
+require_once __DIR__ . '/../../../api/app/controllers/DoctorController.php';
 require_once __DIR__ . '/../../../api/app/models/DoctorModel.php';
-// use Illuminate\Database\Capsule\Manager as DB;
-
+require_once __DIR__ . '/../../../api/app/config/db.config.php';
 
 class DoctorModelTest extends TestCase
 {
-    protected static $pdo;
-    protected $transactionStarted = false;
+    protected static $db;
+    protected static $qb;
+    protected $doctorModel;
 
-    
     public static function setUpBeforeClass(): void
     {
-        // Kết nối tới DB test
-        self::$pdo = new PDO('mysql:host=localhost;dbname=doantotnghiep', 'root', '');
-        self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // Khởi tạo Pixie Connection
+        $config = [
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'database'  => 'doantotnghiep',
+            'username'  => 'root',
+            'password'  => '',
+            'charset'   => 'utf8',
+            'options'   => [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            ]
+        ];
+        self::$db = new Connection('mysql', $config, 'DB');
+        self::$qb = self::$db->getQueryBuilder();
     }
 
-    protected function setUp(): void
+    public function tearDown(){
+        // Rollback transaction sau mỗi test case
+        // self::$db->getPdoInstance()->commit;
+        self::$db->getPdoInstance()->rollback();
+    }
+
+    public function setUp(): void
     {
-        // Bắt đầu transaction
-        self::$pdo->beginTransaction();
-        $this->transactionStarted = true;
+        // Bắt đầu transaction trước mỗi test case
+        self::$db->getPdoInstance()->beginTransaction();
+        $this->doctorModel = new DoctorModel();
     }
 
-    protected function tearDown(): void
+    // m10_DoctorModel_select_01
+    // Id hop le
+    // Input: id = 37
+    // Output: doctorModel với id = 37
+    public function testSelectWithValidId()
     {
-        // Rollback để giữ nguyên dữ liệu
-        if ($this->transactionStarted) {
-            self::$pdo->rollBack();
-        }
+        // Insert dữ liệu giả lập vào database để test
+        self::$qb->table(TABLE_PREFIX . TABLE_DOCTORS)->insert([
+            'id' => 37,
+            'email' => 'doctor@example.com',
+            'phone' => '1234567890'
+        ]);
+
+        // Gọi phương thức select() của DoctorModel
+        $doctor = $this->doctorModel->select(37);
+
+        // Kiểm tra kết quả
+        // $this->assertTrue($doctor->get('is_available'));
+        $this->assertEquals(37, $doctor->get('id'));
+        $this->assertEquals('doctor@example.com', $doctor->get('email'));
+        $this->assertEquals('1234567890', $doctor->get('phone'));
     }
 
-    public function testInsertDoctor()
+    // m10_DoctorModel_select_02
+    // Test method select() với email hợp lệ
+    // Input: email = 'doctor@example.com'
+    // Output: doctorModel với id = 37
+    public function testSelectWithValidEmail()
     {
-        $doctor = new DoctorModel();
-        $doctor->set("email", "unit_test@example.com");
-        $doctor->set("phone", "0123456789");
-        $doctor->set("name", "Unit Test");
-        $doctor->set("password", "123456");
-        $doctor->set("description", "Unit test description");
-        $doctor->set("price", 500);
-        $id = $doctor->insert();
+        // Insert dữ liệu giả lập vào database
+        self::$qb->table(TABLE_PREFIX . TABLE_DOCTORS)->insert([
+            'id' => 37,
+            'email' => 'doctor@example.com',
+            'phone' => '1234567890'
+        ]);
 
-        // Kiểm tra output
-        $this->assertIsNumeric($id);
-        $this->assertGreaterThan(0, $id);
+        // Gọi phương thức select() với email
+        $doctor = $this->doctorModel->select('doctor@example.com');
 
-        // Kiểm tra DB
-        $stmt = self::$pdo->prepare("SELECT * FROM " . TABLE_PREFIX . TABLE_DOCTORS . " WHERE id = ?");
-        $stmt->execute([$id]);
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        $this->assertNotEmpty($result);
-        $this->assertEquals("unit_test@example.com", $result["email"]);
-        $this->assertEquals("Unit Test", $result["name"]);
+        // Kiểm tra kết quả
+        // $this->assertTrue($doctor->get('is_available'));
+        $this->assertEquals('doctor@example.com', $doctor->get('email'));
     }
 
-    public function testUpdateDoctor()
+    // m10_DoctorModel_select_03
+    // Test method select() với số điện thoại hợp lệ
+    // Input: phone = '1234567890'
+    // Output: doctorModel với id = 37
+    public function testSelectWithPhoneNumber()
     {
-        // Tạo trước doctor
-        $doctor = new DoctorModel();
-        $doctor->set("email", "update_test@example.com");
-        $doctor->set("phone", "0111222333");
-        $doctor->set("name", "Update Test");
-        $doctor->set("password", "123456");
-        $doctor->insert();
+        // Insert dữ liệu giả lập vào database
+        self::$qb->table(TABLE_PREFIX . TABLE_DOCTORS)->insert([
+            'id' => 37,
+            'email' => 'doctor@example.com',
+            'phone' => '1234567890'
+        ]);
 
-        // Thực hiện update
-        $doctor->set("name", "Updated Name");
-        $doctor->update();
-
-        // Kiểm tra DB
-        $stmt = self::$pdo->prepare("SELECT name FROM " . TABLE_PREFIX . TABLE_DOCTORS . " WHERE id = ?");
-        $stmt->execute([$doctor->get("id")]);
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        $this->assertEquals("Updated Name", $result["name"]);
+        // Gọi phương thức select() với số điện thoại
+        $doctor = $this->doctorModel->select('1234567890');
+        // fwrite(STDERR, "Hello".var_export($doctor, true));
+        // Kiểm tra kết quả
+        // $this->assertTrue($doctor->get('is_available'));
+        $this->assertEquals('1234567890', $doctor->get('phone'));
     }
 
-    public function testDeleteDoctor()
+    // m10_DoctorModel_select_04
+    // Test method select() với id không hợp lệ
+    // Input: id = 999
+    // Output: is_available = false
+    public function testSelectWithInvalidId()
     {
-        // Tạo trước doctor
-        $doctor = new DoctorModel();
-        $doctor->set("email", "delete_test@example.com");
-        $doctor->set("phone", "0999888777");
-        $doctor->set("name", "Delete Test");
-        $doctor->set("password", "123456");
-        $doctor->insert();
-
-        // Xóa doctor
-        $result = $doctor->delete();
-        $this->assertTrue($result);
-
-        // Kiểm tra DB
-        $stmt = self::$pdo->prepare("SELECT * FROM " . TABLE_PREFIX . TABLE_DOCTORS . " WHERE id = ?");
-        $stmt->execute([$doctor->get("id")]);
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        $this->assertFalse($result);
+        // Gọi phương thức select() với id không tồn tại
+        $doctor = $this->doctorModel->select(999);
+        // fwrite(STDERR, var_export($doctor, true));
+        // fwrite(STDERR, "\n\n", true);
+        // Kiểm tra kết quả khi không tìm thấy dữ liệu
+        $this->assertFalse($doctor->get('is_available'));
     }
 
-    public function testSelectDoctorById()
+    // m10_DoctorModel_update_01
+    // Test method update() với id hợp lệ
+    // Input: id = 36
+    // Output: doctorModel với id = 36
+    public function testUpdateDoctorWithValidID()
     {
-        // Insert trước doctor
-        $doctor = new DoctorModel();
-        $doctor->set("email", "select_test@example.com");
-        $doctor->set("phone", "0777888999");
-        $doctor->set("name", "Select Test");
-        $doctor->set("password", "123456");
-        $id = $doctor->insert();
+        
+        // Arrange
+        $doctor = new DoctorModel(36);
+        $this->assertTrue($doctor->isAvailable(), "Doctor with ID 36 does not exist!");
 
-        // Gọi select
-        $selectedDoctor = new DoctorModel($id);
+        $newName = "Test Doctor Transaction hihii";
+        $newDescription = "Description Transaction";
 
-        // Kiểm tra output
-        $this->assertTrue($selectedDoctor->isAvailable());
-        $this->assertEquals("Select Test", $selectedDoctor->get("name"));
+        // Act
+        $doctor->set("name", $newName);
+        $doctor->set("description", $newDescription);
+        $result = $doctor->update();
+
+        // Assert
+        $this->assertInstanceOf(DoctorModel::class, $result);
+        $this->assertEquals($newName, $doctor->get("name"));
+        $this->assertEquals($newDescription, $doctor->get("description"));
+        
+        // Verify in DB
+        $dbDoctor = self::$qb->table(TABLE_PREFIX . TABLE_DOCTORS)->where("id", "=", 36)->get();
+        $this->assertEquals($newName, $dbDoctor[0]->name);
+        $this->assertEquals($newDescription, $dbDoctor[0]->description);
+
     }
 
-    public function testSelectDoctorByEmail()
-    {
-        // Insert trước doctor
-        $doctor = new DoctorModel();
-        $doctor->set("email", "email_test@example.com");
-        $doctor->set("phone", "0555666777");
-        $doctor->set("name", "Email Test");
-        $doctor->set("password", "123456");
-        $doctor->insert();
-
-        // Gọi select
-        $selectedDoctor = new DoctorModel("email_test@example.com");
-
-        // Kiểm tra output
-        $this->assertTrue($selectedDoctor->isAvailable());
-        $this->assertEquals("Email Test", $selectedDoctor->get("name"));
-    }
+   
+   
 }
-
-?>

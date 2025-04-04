@@ -36,7 +36,6 @@
 			{
 				$col = "phone";
 			}
-
 	    	if ($col) {
 		    	$query = DB::table(TABLE_PREFIX.TABLE_DOCTORS)
 			    	      ->where($col, "=", $uniqid)
