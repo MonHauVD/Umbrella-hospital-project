@@ -22,19 +22,23 @@ public class Constant {
      * @since 18-11-2022
      * Use this APP_PATH if testing device is a real hardware device
      */
-    public static String APP_PATH()
-    {
-//        return "http://192.168.1.221:8080/PTIT-Do-An-Tot-Nghiep/";
-        return "http://192.168.0.102/PTIT-Do-An-Tot-Nghiep/";
-    }
+    //dùng điện thoại
+//    public static String APP_PATH()
+//    {
+////        return "http://192.168.1.221:8080/PTIT-Do-An-Tot-Nghiep/";
+//        return "http://192.168.0.102/PTIT-Do-An-Tot-Nghiep/";
+//    }
 
     /**
      * @since 18-11-2022
      * Use this APP_PATH if testing device is the Android emulator
      */
-    public static String APP_PATH_EMULATOR()
+
+    //dùng máy ảo
+//    public static String APP_PATH_EMULATOR()
+    public static String APP_PATH()
     {
-        return "http://10.0.2.2:8080/PTIT-Do-An-Tot-Nghiep/";
+        return "http://10.0.2.2/Umbrella-hospital-project/";
     }
 
     /**

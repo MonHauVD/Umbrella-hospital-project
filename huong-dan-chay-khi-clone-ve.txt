@@ -1,0 +1,4 @@
+B1: clone nhanh Android:  git clone -b Android --single-branch [link-git]
+B2: vào file -> setting -> build, excution... -> build tools  -> gradle  -> chọn version 17  -> apply -> ok
+B3: cấu hình lại path trong file constant
+B4: close project -> mở lại 
