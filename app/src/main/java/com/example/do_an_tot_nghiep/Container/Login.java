@@ -21,6 +21,22 @@ public class Login {
     @Expose
     private User data;
 
+    public void setResult(Integer result) {
+        this.result = result;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
+
+    public void setData(User data) {
+        this.data = data;
+    }
+
     public Integer getResult() {
         return result;
     }
