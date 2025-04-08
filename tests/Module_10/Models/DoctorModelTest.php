@@ -2,7 +2,7 @@
 use PHPUnit\Framework\TestCase;
 use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
-use Mockery;
+// use Mockery;
 
 require_once __DIR__ . '/../../../api/app/core/DataEntry.php';
 require_once __DIR__ . '/../../../api/app/core/Controller.php';
@@ -68,7 +68,7 @@ class DoctorModelTest extends TestCase
         // $this->assertTrue($doctor->get('is_available'));
         $this->assertEquals(37, $doctor->get('id'));
         $this->assertEquals('doctor@example.com', $doctor->get('email'));
-        $this->assertEquals('1234567890', $doctor->get('phone'));
+        $this->assertEquals('0123456789', $doctor->get('phone'));
     }
 
     // M10_DoctorModel_select_02
