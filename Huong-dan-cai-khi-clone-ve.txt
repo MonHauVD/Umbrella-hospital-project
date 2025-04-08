@@ -1,0 +1,2 @@
+B1: clone từ nhánh main
+B2: cấu hình lại db trong file config

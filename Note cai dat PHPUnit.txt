@@ -19,3 +19,4 @@
 Dependence
 composer require usmanhalalit/pixie
 composer require illuminate/database
+composer require --dev mockery/mockery
