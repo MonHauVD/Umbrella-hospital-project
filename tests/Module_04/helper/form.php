@@ -16,9 +16,8 @@ require_once __DIR__ . '/../../api/app/core/Input.php';
 require_once __DIR__ . '/../../api/app/config/db.config.php';
 require_once __DIR__ . '/../../api/app/core/DataList.php';
 require_once __DIR__ . '/../../api/app/helpers/common.helper.php';
-require_once __DIR__ . '/../../api/app/controllers/LoginController.php';
-require_once __DIR__ . '/../../tests/Module_03/helper/TestableHelperController.php';
-require_once __DIR__ . '/../../tests/Module_03/helper/FakeAuthUser.php';
+require_once __DIR__ . '/../../tests/Module_04/helper/TestableHelperController.php';
+require_once __DIR__ . '/../../tests/Module_04/helper/FakeAuthUser.php';
 
 class LoginByPatientControllerTest extends TestCase
 {
