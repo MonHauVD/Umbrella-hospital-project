@@ -5,3 +5,4 @@ Note test.txt
 vendor/
 composer.json
 composer.lock
+ConfigDefine.php
