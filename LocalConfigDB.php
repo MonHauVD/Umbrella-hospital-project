@@ -2,10 +2,10 @@
 //add to git irgnore
 return [
     'driver'    => 'mysql',
-    'host'      => 'localhost',
+    'host'      => 'ngat',
     'database'  => 'doantotnghiep',
     'username'  => 'root',
-    'password'  => '',
+    'password'  => '12345',
     'charset'   => 'utf8',
     'options'   => [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
