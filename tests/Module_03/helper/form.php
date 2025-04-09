@@ -4,7 +4,7 @@ use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
 
 if (!defined('APPPATH')) {
-    define('APPPATH', realpath(__DIR__ . '/../app'));
+    define('APPPATH', realpath(__DIR__ . '/../../app'));
 }
 if (!function_exists('isNumber')) {
     function isNumber($str) {

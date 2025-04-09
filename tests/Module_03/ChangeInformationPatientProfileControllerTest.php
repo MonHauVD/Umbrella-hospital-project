@@ -4,7 +4,7 @@ use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
 
 if (!defined('APPPATH')) {
-    define('APPPATH', realpath(__DIR__ . '/../app'));
+    define('APPPATH', realpath(__DIR__ . '/../../api/app'));
 }
 
 if (!defined('EC_SALT')) {
@@ -12,15 +12,15 @@ if (!defined('EC_SALT')) {
 }
 
 // Load core và controller
-require_once __DIR__ . '/../app/core/DataEntry.php';
-require_once __DIR__ . '/../app/core/Controller.php';
-require_once __DIR__ . '/../app/core/Input.php';
-require_once __DIR__ . '/../app/config/db.config.php';
-require_once __DIR__ . '/../app/core/DataList.php';
-require_once __DIR__ . '/../app/helpers/common.helper.php';
-require_once __DIR__ . '/../app/controllers/PatientProfileController.php';
-require_once __DIR__ . '/../tests/helper/TestableHelperController.php';
-require_once __DIR__ . '/../tests/helper/FakeAuthUser.php';
+require_once __DIR__ . '/../../api/app/core/DataEntry.php';
+require_once __DIR__ . '/../../api/app/core/Controller.php';
+require_once __DIR__ . '/../../api/app/core/Input.php';
+require_once __DIR__ . '/../../api/app/config/db.config.php';
+require_once __DIR__ . '/../../api/app/core/DataList.php';
+require_once __DIR__ . '/../../api/app/helpers/common.helper.php';
+require_once __DIR__ . '/../../api/app/controllers/PatientProfileController.php';
+require_once __DIR__ . '/../../tests/Module_03/helper/TestableHelperController.php';
+require_once __DIR__ . '/../../tests/Module_03/helper/FakeAuthUser.php';
 
 class ChangeInformationPatientProfileControllerTest extends TestCase
 {
@@ -32,15 +32,7 @@ class ChangeInformationPatientProfileControllerTest extends TestCase
 
     public static function setUpBeforeClass(): void
     {
-        $config = [
-            'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'database'  => 'doantotnghiep',
-            'username'  => 'mysql',
-            'password'  => '12345',
-            'charset'   => 'utf8',
-            'options'   => [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-        ];
+        $config = require __DIR__ . '/../../LocalConfigDB.php';
         self::$db = new Connection('mysql', $config, 'DB');
         self::$qb = self::$db->getQueryBuilder();
     }
