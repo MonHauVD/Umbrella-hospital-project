@@ -6,3 +6,5 @@ vendor/
 composer.json
 composer.lock
 ConfigDefine.php
+api/app/config/db.config.php
+LocalConfigDefine.php
