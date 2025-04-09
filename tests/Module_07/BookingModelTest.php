@@ -300,4 +300,27 @@ class BookingModelTest extends TestCase
     }
 
 
+    // Kiểm tra nhánh returnn false được thực thi hay không
+    public function test_M07_BookingModel_delete_01(){
+        $booking = new BookingModel();
+        $res = $booking->delete();
+        $this->assertFalse($res);
+     }
+     
+
+     //Mục tiêu: kiểm tra nhánh isAvailable == true, và kiểm tra kết quả return là $this
+     public function test_M07_BookingModel_delete_02()
+    {
+        
+        $booking = new BookingModel(88);
+
+        $res = $booking->delete();
+        $this->assertTrue($res);
+        $this->assertFalse($booking->isAvailable());
+
+        // $this->expectException(PDOException::class);
+        $getBooking = DB::table(TABLE_PREFIX.TABLE_BOOKINGS)->where("id", "=", 88)->get();
+        $this->assertEquals(0, count($getBooking));
+        
+    }
 }
