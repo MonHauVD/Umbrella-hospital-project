@@ -10,15 +10,16 @@
          colors="true">
     <testsuites>
         <testsuite name="default">
-            <directory suffix="Test.php">tests</directory>
+            <directory suffix="Test.php">tests/Module_07</directory>
         </testsuite>
     </testsuites>
 
-    <!-- <filter>
+
+    <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix="Test.php">api</directory>
+            <directory suffix=".php">/api/app/models</directory>
         </whitelist>
-    </filter> -->
+    </filter>
 
    
 
