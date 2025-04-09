@@ -1,4 +1,5 @@
 <?php
+//add to git irgnore
 return [
     'driver'    => 'mysql',
     'host'      => 'localhost',

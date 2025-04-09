@@ -1751,3 +1751,17 @@ Stack trace:
 #4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\ve in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
 [19-Mar-2025 08:45:51 UTC] PHP Notice:  Undefined variable: serviceId in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 166
 [19-Mar-2025 08:45:51 UTC] PHP Notice:  Undefined variable: doctorId in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 167
+[09-Apr-2025 07:50:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=ne...', 'root', '', Array)
+#1 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\ConnectionAdapters\Mysql->doConnect(Arra in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[09-Apr-2025 07:54:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=ne...', 'root', '', Array)
+#1 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\ConnectionAdapters\Mysql->doConnect(Arra in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138

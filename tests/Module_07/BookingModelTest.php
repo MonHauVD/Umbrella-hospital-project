@@ -284,8 +284,9 @@ class BookingModelTest extends TestCase
      public function test_M07_BookingModel_update_02()
     {
         
-        $booking = new BookingModel(112);
+        $booking = new BookingModel(88);
 
+        $booking->set("")
         
 
         $booking->method('isAvailable')->willReturn(true);
