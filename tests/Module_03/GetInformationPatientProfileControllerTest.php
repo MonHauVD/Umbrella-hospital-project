@@ -7,7 +7,7 @@ if (!defined('APPPATH')) {
     define('APPPATH', realpath(__DIR__ . '/../../api/app'));
 }
 if (!defined('EC_SALT')) {
-    define('EC_SALT', 'your_test_secret_key_here'); 
+    define('EC_SALT', 'your_test_secret_key_here');
 }
 
 require_once __DIR__ . '/../../api/app/core/DataEntry.php';
@@ -20,7 +20,6 @@ require_once __DIR__ . '/../../api/app/controllers/PatientProfileController.php'
 require_once __DIR__ . '/../../tests/Module_03/helper/TestableHelperController.php';
 require_once __DIR__ . '/../../tests/Module_03/helper/FakeAuthUser.php';
 
-
 class GetInformationPatientProfileControllerTest extends TestCase
 {
     protected static $db;
@@ -29,69 +28,35 @@ class GetInformationPatientProfileControllerTest extends TestCase
     private $controller;
     private $routeMock;
     private $authMock;
+
     public static function setUpBeforeClass(): void
     {
-        // Khởi tạo Pixie Connection
         $config = require __DIR__ . '/../../LocalConfigDB.php';
         self::$db = new Connection('mysql', $config, 'DB');
         self::$qb = self::$db->getQueryBuilder();
     }
 
-    public function tearDown(): void{
-        // Rollback transaction sau mỗi test case
+    public function tearDown(): void
+    {
         self::$db->getPdoInstance()->rollback();
     }
 
     public function setUp(): void
     {
-        // Bắt đầu transaction trước mỗi test case
         self::$db->getPdoInstance()->beginTransaction();
 
-         // Create an instance of the controller
-        $this->controller = $this->getMockBuilder(PatientProfileController::class)
-                                  ->setMethods(['getVariable', 'jsonecho']) // Mocking getVariable
-                                  ->getMock();
+        $this->controller = new TestableHelperController();
 
-
-         // Create a mock for the Route class (assuming it's a class)
-         $this->authMock = $this->createMock(stdClass::class);
-         $this->routeMock = $this->createMock(stdClass::class);
- 
-         // Mock the getVariable method to return the routeMock
-        //  $this->controller->method('getVariable')->willReturn($this->routeMock);
-        $this->controller->method('getVariable')
-                 ->will($this->returnCallback(function($name) {
-                     if ($name === "Route") {
-                         return $this->routeMock;
-                     } elseif ($name === "AuthUser") {
-                         return $this->authMock;
-                     }
-                     return null;
-                 }));
-                 
-        //Stop code when calling jsonecho method
-        // $this->controller->method('jsonecho')->will($this->returnCallback(function() {
-        //     return; // Ngừng thực thi phần còn lại của hàm
-        // }));
-        // Cho phép test đọc được resp thông qua Reflection
-        $controller = $this->controller;
-        $this->controller->method('jsonecho')->will($this->returnCallback(function () use ($controller) {
-            $reflection = new ReflectionClass($controller);
-            $prop = $reflection->getProperty('resp');
-            $prop->setAccessible(true);
-            echo json_encode($prop->getValue($controller));
-        }));
+        $this->routeMock = $this->createMock(stdClass::class);
+        $this->controller->mockRoute = $this->routeMock;
     }
-    //PatientProfileController
-    
 
-    //đã đăng nhập
+    // Trường hợp đã đăng nhập
     public function testGetInformationWithAuthUser()
     {
         require_once APPPATH . "/models/PatientsModel.php";
         $patients = new PatientsModel();
         $patients->where("id", ">", 0)->orderBy("id", "asc")->fetchData();
-
         $data = $patients->getData();
 
         if (count($data) === 0) {
@@ -100,28 +65,17 @@ class GetInformationPatientProfileControllerTest extends TestCase
 
         $patient = $data[0];
 
-        // Bắt đầu lưu output thủ công (để không bị PHPUnit nuốt)
-        ob_start();
-        print_r($patient);
-        $outputDebug = ob_get_clean();
+        // In thông tin bệnh nhân ra log để debug
+        fwrite(STDOUT, "\nPatient data:\n" . print_r($patient, true) . "\n");
 
-        // In ra console trong quá trình test
-        fwrite(STDOUT, "\nPatient data:\n" . $outputDebug . "\n");
-
-        // Wrap patient stdClass thành đối tượng có get()
         $authUser = new FakeAuthUser($patient);
         $this->authMock = $authUser;
-        $this->controller->method('getVariable')
-        ->will($this->returnCallback(function($name) {
-            if ($name === "Route") {
-                return $this->routeMock;
-            } elseif ($name === "AuthUser") {
-                return $this->authMock;
-            }
-            return null;
-        }));
 
-        // Gọi getInformation() qua Reflection
+        // Set biến giả lập vào controller
+        $this->controller->setVariable("AuthUser", $this->authMock);
+        $this->controller->setVariable("Route", $this->routeMock);
+
+        // Gọi hàm getInformation
         try {
             $reflection = new ReflectionClass($this->controller);
             $method = $reflection->getMethod("getInformation");
@@ -133,39 +87,39 @@ class GetInformationPatientProfileControllerTest extends TestCase
             }
         }
 
-        $output = json_decode($this->getActualOutputForAssertion(), true);
+        // Lấy output từ jsonecho override
+        $output = json_decode($this->controller->output, true);
 
+        // Kiểm tra kết quả
         $this->assertEquals(1, $output["result"]);
         $this->assertEquals("Action successfully !", $output["msg"]);
         $this->assertArrayHasKey("id", $output["data"]);
         $this->assertEquals($patient->id, $output["data"]["id"]);
     }
 
-    //chưa đăng nhập
+    // Trường hợp chưa đăng nhập
     public function testGetInformationWithoutAuthUser()
     {
-        // Tạo mock controller riêng 
         $controller = $this->getMockBuilder(PatientProfileController::class)
             ->setMethods(['getVariable', 'jsonecho'])
             ->getMock();
 
-        // Mock getVariable trả về null cho "AuthUser"
         $controller->method('getVariable')
-            ->willReturnCallback(function($name) {
+            ->willReturnCallback(function ($name) {
                 if ($name === "AuthUser") return null;
                 return null;
             });
 
-        // Mock jsonecho để in ra response
         $controller->method('jsonecho')
-        ->willReturnCallback(function () use ($controller) {
-            $reflection = new ReflectionClass($controller);
-            $prop = $reflection->getProperty('resp');
-            $prop->setAccessible(true);
-            echo json_encode($prop->getValue($controller));
-            throw new \Exception("__EXIT__"); // Dừng hàm tại đây
-        });
-        // Gọi hàm qua Reflection
+            ->willReturnCallback(function () use ($controller) {
+                $reflection = new ReflectionClass($controller);
+                $prop = $reflection->getProperty('resp');
+                $prop->setAccessible(true);
+                echo json_encode($prop->getValue($controller));
+                throw new \Exception("__EXIT__");
+            });
+
+        // Gọi hàm getInformation
         ob_start();
         try {
             $reflection = new ReflectionClass($controller);
@@ -184,5 +138,4 @@ class GetInformationPatientProfileControllerTest extends TestCase
         $this->assertEquals("There is no authenticated user !", $output["msg"]);
         $this->assertArrayNotHasKey("data", $output);
     }
-
 }
