@@ -1383,3 +1383,12 @@ Stack trace:
 #4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php(72): App->process()
 #5 {main}
   thrown in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\helpers\email.helper.php on line 28
+[09-Apr-2025 05:33:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to a member function get() on null in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:113
+Stack trace:
+#0 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php(582): App->ipinfo()
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php(72): App->process()
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\tests\Module_10\Models\DoctorModelTest.php(7): require_once('D:\\Data of Prog...')
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\vendor\phpunit\phpunit\src\Util\FileLoader.php(57): include_once('D:\\Data of Prog...')
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\vendor\phpunit\phpunit\src\Util\FileLoader.php(45): PHPUnit\Util\FileLoader::load('D:\\Data of Prog...')
+#5 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\vendor\phpunit\phpunit\src\Runner\StandardTestSuiteLoader.php(39): PHPUnit\Util\FileLoader::checkAndLoad('D:\\Data of Prog...')
+#6 D:\Data of Pro in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php on line 113
