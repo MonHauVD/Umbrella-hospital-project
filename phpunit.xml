@@ -16,7 +16,7 @@
 
     <!-- <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">api</directory>
+            <directory suffix="Test.php">api</directory>
         </whitelist>
     </filter> -->
 

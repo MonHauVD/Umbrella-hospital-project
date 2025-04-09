@@ -35,19 +35,19 @@ class BookingModelTest extends TestCase
     // Test case lấy thông tin booking từ database với một id tồn tại
     public function test_M07_BookingModel_select_01()
     {
-        $ids = 112;
+        $ids = 88;
         // Arrange
         $booking = new BookingModel($ids);
     
-        $this->assertEquals( "112", $booking->get("id"));
+        $this->assertEquals( "88", $booking->get("id"));
         $this->assertEquals( "PhongKaster", $booking->get("booking_name"));
-        $this->assertEquals("0366964346", $booking->get("booking_phone"));
-        $this->assertEquals( "0", $booking->get("doctor_id"));
-        $this->assertEquals("38", $booking->get("patient_id"));
-        $this->assertEquals( "24", $booking->get("service_id"));
+        $this->assertEquals("0794104124", $booking->get("booking_phone"));
+        $this->assertEquals( "3", $booking->get("doctor_id"));
+        $this->assertEquals("4", $booking->get("patient_id"));
+        $this->assertEquals( "1", $booking->get("service_id"));
         $this->assertEquals("PhongKaster", $booking->get("name"));
-        $this->assertEquals( "2025-03-19 16:51:57", $booking->get("update_at"));
-        $this->assertEquals("2025-03-19 16:51:57", $booking->get("create_at"));
+        $this->assertEquals( "2022-12-19 17:09:14", $booking->get("update_at"));
+        $this->assertEquals("2022-12-19 17:09:14", $booking->get("create_at"));
 
         // Verify in DB
         $dbBooking = DB::table(TABLE_PREFIX.TABLE_BOOKINGS)->where("id", "=", $ids)->get();
@@ -97,7 +97,7 @@ class BookingModelTest extends TestCase
         $this->assertFalse( $booking->isAvailable());
         $booking->set("service_id", "24");
         $booking->set("doctor_id", "0");
-        $booking->set("patient_id", "38");
+        $booking->set("patient_id", "3");
         $booking->set("booking_name", "PhongKaster");
         $booking->set("booking_phone", "0366964346");
         $booking->set("name", "PhongKaster");
