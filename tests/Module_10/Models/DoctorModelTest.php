@@ -38,7 +38,7 @@ class DoctorModelTest extends TestCase
     public function tearDown(){
         // Rollback transaction sau mỗi test case
         // self::$db->getPdoInstance()->commit;
-        // self::$db->getPdoInstance()->rollback();
+        self::$db->getPdoInstance()->rollback();
     }
 
     public function setUp(): void
@@ -60,7 +60,7 @@ class DoctorModelTest extends TestCase
             'id' => 37,
             'email' => 'doctor@example.com',
             'phone' => '0123456789'
-        ])->get();
+        ]);
 
         // Gọi phương thức select() của DoctorModel
         $doctor = $this->doctorModel->select(37);
