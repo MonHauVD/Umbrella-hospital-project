@@ -191,12 +191,17 @@ class TreatmentModelTest extends TestCase
         $treatment->set("appointment_id", $appointmentId);
         $treatment->set("name", "Default Test");
 
-        $insertedId = $treatment->insert();
-
-        $this->assertIsNumeric($insertedId); 
-        $this->assertEquals("", $treatment->get("type")); // Defaulted
-        $this->assertEquals("", $treatment->get("purpose")); // Defaulted
-        $this->assertTrue($treatment->isAvailable());
+        try {
+            $insertedId = $treatment->insert();
+            $this->assertIsNumeric($insertedId);
+            $this->assertEquals("", $treatment->get("type")); // Defaulted
+            $this->assertEquals("", $treatment->get("purpose")); // Defaulted
+            $this->assertTrue($treatment->isAvailable());
+            // throw new PDOException("Insert failed"); // Giả lập lỗi PDOException
+        } catch (\PDOException $e) {
+            // Đánh dấu test là thất bại và in ra lý do
+            $this->fail("Insert failed with PDOException: " . $e->getMessage());
+        }
     }
     // M06_TreatmentModel_Insert_03
     // Test trường hợp insert một bản ghi TreatmentModel với dữ liệu không hợp lệ
@@ -228,7 +233,8 @@ class TreatmentModelTest extends TestCase
         $treatment = new TreatmentModel();
         $treatment->set("appointment_id", $appointmentId);
         $treatment->set("name", "Return ID Check");
-
+        $treatment->set("times", 2);
+        
         $insertedId = $treatment->insert();
 
         $this->assertIsInt((int)$insertedId); // ép về int nếu DB trả về string
@@ -297,6 +303,7 @@ class TreatmentModelTest extends TestCase
         $treatment = new TreatmentModel();
         $treatment->set("appointment_id", $appointmentId);
         $treatment->set("name", "Before Missing");
+        $treatment->set("times", 1);
         $treatment->insert();
 
         $treatment->set("type", null);
@@ -317,6 +324,7 @@ class TreatmentModelTest extends TestCase
         $treatment = new TreatmentModel();
         $treatment->set("appointment_id", $appointmentId);
         $treatment->set("name", "To be deleted");
+        $treatment->set("times", 1);
         $treatment->insert();
 
         $this->assertTrue($treatment->isAvailable());
@@ -354,6 +362,7 @@ class TreatmentModelTest extends TestCase
         $treatment = new TreatmentModel();
         $treatment->set("appointment_id", $appointmentId);
         $treatment->set("name", "Double delete test");
+        $treatment->set("times", 1);
         $treatment->insert();
 
         // Lần xóa đầu tiên
