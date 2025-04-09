@@ -4,7 +4,7 @@ return [
     'host'      => 'localhost',
     'database'  => 'doantotnghiep',
     'username'  => 'root',
-    'password'  => '',
+    'password'  => '123456',
     'charset'   => 'utf8',
     'options'   => [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
