@@ -4,6 +4,7 @@ use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
 // use Mockery;
 
+
 require_once __DIR__ . '/../../../ConfigDefine.php';
 require_once __DIR__ . '/../../../api/app/core/DataEntry.php';
 require_once __DIR__ . '/../../../api/app/core/Controller.php';
@@ -17,20 +18,11 @@ class DoctorModelTest extends TestCase
     protected static $qb;
     protected $doctorModel;
 
+    
     public static function setUpBeforeClass(): void
     {
         // Khởi tạo Pixie Connection
-        $config = [
-            'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'database'  => 'doantotnghiep',
-            'username'  => 'root',
-            'password'  => '',
-            'charset'   => 'utf8',
-            'options'   => [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            ]
-        ];
+        $config = require __DIR__ . '/../../../LocalConfigDB.php';
         self::$db = new Connection('mysql', $config, 'DB');
         self::$qb = self::$db->getQueryBuilder();
     }

@@ -18,17 +18,7 @@ class AppointmentRecordModelTest extends TestCase
     public static function setUpBeforeClass(): void
     {
         // Khởi tạo Pixie Connection
-        $config = [
-            'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'database'  => 'doantotnghiep',
-            'username'  => 'root',
-            'password'  => '',
-            'charset'   => 'utf8',
-            'options'   => [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            ]
-        ];
+        $config = require __DIR__ . '/../../../LocalConfigDB.php';
         self::$db = new Connection('mysql', $config, 'DB');
         self::$qb = self::$db->getQueryBuilder();
     }
