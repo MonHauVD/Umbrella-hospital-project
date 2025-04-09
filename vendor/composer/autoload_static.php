@@ -63,6 +63,10 @@ class ComposerStaticInit638aeb3ef3eb7f7fba2f1c1820780286
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -173,6 +177,10 @@ class ComposerStaticInit638aeb3ef3eb7f7fba2f1c1820780286
         'Illuminate\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'Doctrine\\Instantiator\\' => 
         array (

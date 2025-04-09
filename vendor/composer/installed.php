@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '3b60bd5aacc165f641f8564369ed58c98d1f1990',
+        'reference' => '431ee0d6e1562976cf0bb3ca7910713c054cf63f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '3b60bd5aacc165f641f8564369ed58c98d1f1990',
+            'reference' => '431ee0d6e1562976cf0bb3ca7910713c054cf63f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -66,6 +66,15 @@
             'install_path' => __DIR__ . '/../doctrine/instantiator',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'firebase/php-jwt' => array(
+            'pretty_version' => 'v6.4.0',
+            'version' => '6.4.0.0',
+            'reference' => '4dd1e007f22a927ac77da5a3fbb067b42d3bc224',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../firebase/php-jwt',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'hamcrest/hamcrest-php' => array(
             'pretty_version' => 'v2.0.1',
