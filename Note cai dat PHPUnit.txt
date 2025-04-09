@@ -37,6 +37,9 @@ zend_extension = xdebug
 
 git update-index --assume-unchanged path/to/file  // thay đổi các file cấu hình cá nhân nhưng không muốn đẩy lên git thì dùng câu lệnh này
 --no-assume-unchanged  //track lại
+
+Ví dụ:
+git update-index --no-assume-unchanged LocalConfigDB.php
 # Note
 	1. php -i | findstr "Architecture"
 		Kết quả x64 → bạn dùng bản 64-bit (Chọn)
