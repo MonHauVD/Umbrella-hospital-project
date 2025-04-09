@@ -261,6 +261,21 @@ class DoctorModelTest extends TestCase
     {
         // fwrite(STDERR, "\ntestUpdateDoctorWithValidID");
         // Arrange
+        $doctorId = 36;
+
+        // Check if doctor with ID 36 already exists
+        $existing = self::$qb->table(TABLE_PREFIX . TABLE_DOCTORS)->where('id', $doctorId)->first();
+
+        if (!$existing) {
+            self::$qb->table(TABLE_PREFIX . TABLE_DOCTORS)->insert([
+                'id' => $doctorId,
+                'name' => 'Initial Doctor',
+                'description' => 'Initial Description',
+                'create_at' => date('Y-m-d H:i:s'),
+                'update_at' => date('Y-m-d H:i:s')
+            ]);
+        }
+
         $doctor = new DoctorModel(36);
         $this->assertTrue($doctor->isAvailable(), "Doctor with ID 36 does not exist!");
 

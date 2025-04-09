@@ -94,6 +94,7 @@ class BookingPhotoModelTest extends TestCase
             'patient_id' => 1, // Chỉnh theo schema thực tế
             'doctor_id' => 1,
             'status' => 'pending',
+            'appointment_time' => date('H:i'),
             'create_at' => date('Y-m-d H:i:s'),
             'update_at' => date('Y-m-d H:i:s')
         ]);
@@ -153,6 +154,7 @@ class BookingPhotoModelTest extends TestCase
             'patient_id' => 1, // Chỉnh theo schema thực tế
             'doctor_id' => 1,
             'status' => 'pending',
+            'appointment_time' => date('H:i'),
             'create_at' => date('Y-m-d H:i:s'),
             'update_at' => date('Y-m-d H:i:s')
         ]);

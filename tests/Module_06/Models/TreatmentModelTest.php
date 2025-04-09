@@ -146,6 +146,7 @@ class TreatmentModelTest extends TestCase
     public function testInsertWithFullData()
     {
         $appointmentId = self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1,
             'doctor_id' => 1,
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),
@@ -177,6 +178,7 @@ class TreatmentModelTest extends TestCase
     public function testInsertWithPartialDataExtendsDefaults()
     {
         $appointmentId = self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1,
             'doctor_id' => 1,
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),
@@ -214,6 +216,7 @@ class TreatmentModelTest extends TestCase
     public function testInsertReturnsIntegerId()
     {
         $appointmentId = self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1,
             'doctor_id' => 1,
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),
@@ -234,6 +237,7 @@ class TreatmentModelTest extends TestCase
     private function createDummyAppointment()
     {
         return self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1,
             'doctor_id' => 1,
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),

@@ -46,6 +46,7 @@ class AppointmentRecordModelTest extends TestCase
         $model = new AppointmentRecordModel();
     
         $appointmentId = self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1, // hoặc một giá trị giả định hợp lệ
             'doctor_id' => 1, // hoặc một giá trị giả định hợp lệ
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),
@@ -128,6 +129,7 @@ class AppointmentRecordModelTest extends TestCase
     public function testUpdateSuccessfullyUpdatesAppointmentRecord()
     {
         $appointmentId = self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1, // hoặc một giá trị giả định hợp lệ            
             'doctor_id' => 1, // hoặc một giá trị giả định hợp lệ
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),
@@ -196,6 +198,7 @@ class AppointmentRecordModelTest extends TestCase
     public function testInsertSuccessWithFullData()
     {
         $appointmentId = self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1,
             'doctor_id' => 1,
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),
@@ -233,6 +236,7 @@ class AppointmentRecordModelTest extends TestCase
     {
         $record = new AppointmentRecordModel();
         $appointmentId = self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1,
             'doctor_id' => 1,
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),
@@ -281,6 +285,7 @@ class AppointmentRecordModelTest extends TestCase
     {
         // STEP 1: Tạo dữ liệu phụ thuộc
         $appointmentId = self::$qb->table(TABLE_PREFIX.TABLE_APPOINTMENTS)->insert([
+            'booking_id' => 1,
             'doctor_id' => 1,
             'patient_id' => 1,
             'appointment_time' => date('Y-m-d H:i:s'),

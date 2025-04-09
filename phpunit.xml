@@ -14,11 +14,11 @@
         </testsuite>
     </testsuites>
 
-    <filter>
+    <!-- <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">api</directory>
         </whitelist>
-    </filter>
+    </filter> -->
 
    
 
