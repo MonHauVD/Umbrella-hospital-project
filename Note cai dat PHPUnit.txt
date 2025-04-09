@@ -35,7 +35,8 @@ zend_extension = xdebug
 2. Làm theo hướng dẫn của trang web
 
 
-
+git update-index --assume-unchanged path/to/file  // thay đổi các file cấu hình cá nhân nhưng không muốn đẩy lên git thì dùng câu lệnh này
+--no-assume-unchanged  //track lại
 # Note
 	1. php -i | findstr "Architecture"
 		Kết quả x64 → bạn dùng bản 64-bit (Chọn)
