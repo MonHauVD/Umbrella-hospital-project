@@ -2,12 +2,22 @@
 /**
  * Define database credentials
  */
-define("DB_HOST", "localhost"); 
-define("DB_NAME", "doantotnghiep"); 
-define("DB_USER", "root"); 
-define("DB_PASS", ""); 
-define("DB_ENCODING", "utf8"); // DB connnection charset
+// define("DB_HOST", "localhost"); 
+// define("DB_NAME", "doantotnghiep"); 
+// define("DB_USER", "root"); 
+// define("DB_PASS", ""); 
+// define("DB_ENCODING", "utf8"); // DB connnection charset
 
+$config = require __DIR__ . '/../../../LocalConfigDB.php'; // điều chỉnh đường dẫn nếu khác
+
+/**
+ * Define database credentials
+ */
+define("DB_HOST", $config['host']); 
+define("DB_NAME", $config['database']); 
+define("DB_USER", $config['username']); 
+define("DB_PASS", $config['password']); 
+define("DB_ENCODING", $config['charset']);
 
 /**
  * Define DB tables

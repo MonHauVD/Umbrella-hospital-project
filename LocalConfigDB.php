@@ -8,5 +8,6 @@ return [
     'charset'   => 'utf8',
     'options'   => [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]
+    ],
+    'database_frontend' => 'nextpost'
 ];
