@@ -33,12 +33,13 @@ class BookingModelsTest extends TestCase
 
 
     // Test case lấy thông tin booking từ database với một id tồn tại
-    public function test_M07_BookingModels_select_01()
+    public function test_M07_BookingModels_getAll_01()
     {
        
         $booking = new BookingsModel();
+        $booking->fetchData();
         
-        $this->assertEquals(25, $booking->getTotalCount());
+        $this->assertEquals(27, count($booking->getData()));
 
         // Verify in DB
         // $dbBooking = DB::table(TABLE_PREFIX.TABLE_BOOKINGS)->where("id", "=", $ids)->get();
