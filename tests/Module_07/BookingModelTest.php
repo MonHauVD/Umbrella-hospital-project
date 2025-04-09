@@ -16,17 +16,7 @@ class BookingModelTest extends TestCase
     public static function setUpBeforeClass(): void
     {
         // Khởi tạo Pixie Connection
-        $config = [
-            'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'database'  => 'doantotnghiep',
-            'username'  => 'root',
-            'password'  => '',
-            'charset'   => 'utf8',
-            'options'   => [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            ]
-        ];
+        $config =  require __DIR__ . '/../../LocalConfigDB.php';
         self::$db = new Connection('mysql', $config, 'DB');
         self::$qb = self::$db->getQueryBuilder();
     }
@@ -288,6 +278,58 @@ class BookingModelTest extends TestCase
         $res = $booking->update();
         $this->assertFalse($res);
      }
+     
+
+     //Mục tiêu: kiểm tra nhánh isAvailable == true, và kiểm tra kết quả return là $this
+     public function test_M07_BookingModel_update_02()
+    {
+        
+        $booking = new BookingModel(112);
+
+        
+
+        $booking->method('isAvailable')->willReturn(true);
+        $booking->expects($this->once())->method('extendDefaults');
+
+        // Giả lập get() trả về dữ liệu cụ thể cho từng field
+        $booking->method('get')->willReturnMap([
+            ['id', 1],
+            ['doctor_id', 10],
+            ['patient_id', 20],
+            ['service_id', 5],
+            ['booking_name', 'John Doe'],
+            ['booking_phone', '123456789'],
+            ['name', 'John'],
+            ['gender', 'Male'],
+            ['birthday', '1990-01-01'],
+            ['address', '123 Test St'],
+            ['reason', 'Flu'],
+            ['appointment_date', '2025-04-10'],
+            ['appointment_time', '10:00'],
+            ['status', 'pending'],
+            ['create_at', '2025-04-01 10:00:00'],
+            ['update_at', '2025-04-01 10:10:00']
+        ]);
+
+        // Giả lập update query (tránh gọi DB thật)
+        DB::shouldReceive('table')
+            ->once()
+            ->with(TABLE_PREFIX.TABLE_BOOKINGS)
+            ->andReturnSelf();
+        
+        DB::shouldReceive('where')
+            ->once()
+            ->with('id', '=', 1)
+            ->andReturnSelf();
+        
+        DB::shouldReceive('update')
+            ->once()
+            ->andReturn(1); // giả lập update thành công
+
+        $result = $booking->update();
+
+        $this->assertSame($booking, $result);
+    }
 
 
 }
