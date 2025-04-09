@@ -4,9 +4,9 @@ use PHPUnit\Framework\TestCase;
 use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
 
-require_once __DIR__ . '/../../../api/app/core/DataEntry.php';
-require_once __DIR__ . '/../../../api/app/models/BookingModel.php';
-require_once __DIR__ . '/../../../api/app/config/db.config.php';
+require_once __DIR__ . '/../../api/app/core/DataEntry.php';
+require_once __DIR__ . '/../../api/app/models/BookingModel.php';
+require_once __DIR__ . '/../../api/app/config/db.config.php';
 
 class BookingModelTest extends TestCase
 {
@@ -280,5 +280,14 @@ class BookingModelTest extends TestCase
         //  $this->assertTrue( $booking->isAvailable());
         //  $this->assertEquals( "30000", $booking->get("gender"));
      }
+
+
+     // Kiểm tra nhánh returnn false được thực thi hay không
+     public function test_M07_BookingModel_update_01(){
+        $booking = new BookingModel();
+        $res = $booking->update();
+        $this->assertFalse($res);
+     }
+
 
 }
