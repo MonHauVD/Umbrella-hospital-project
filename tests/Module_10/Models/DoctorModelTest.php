@@ -271,6 +271,7 @@ class DoctorModelTest extends TestCase
                 'id' => $doctorId,
                 'name' => 'Initial Doctor',
                 'description' => 'Initial Description',
+                'speciality_id' => 1,
                 'create_at' => date('Y-m-d H:i:s'),
                 'update_at' => date('Y-m-d H:i:s')
             ]);
