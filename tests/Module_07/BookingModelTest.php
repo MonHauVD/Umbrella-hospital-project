@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\TestCase;
 use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
