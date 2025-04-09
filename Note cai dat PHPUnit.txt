@@ -6,6 +6,7 @@
 4. Thiết lập phpunit cho project (<Nơi bạn cài Xampp>\xampp\htdocs\PTIT-Do-An-Tot-Nghiep)
 	composer require --dev phpunit/phpunit "^7"
 	composer require illuminate/database
+	composer require firebase/php-jwt
 5. Xóa hoặc đổi tên 2 file trong (<Nơi bạn cài Xampp>\xampp\php)
 	-phpunit
 	-phpunit.bat
