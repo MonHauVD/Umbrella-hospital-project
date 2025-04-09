@@ -2,6 +2,7 @@
 /**
  * Define database credentials
  */
+
 define("DB_HOST", "localhost"); 
 define("DB_NAME", "doantotnghiep"); 
 define("DB_USER", "root"); 
