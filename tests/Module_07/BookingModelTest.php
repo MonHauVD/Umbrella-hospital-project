@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\TestCase;
 use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
@@ -286,50 +287,17 @@ class BookingModelTest extends TestCase
         
         $booking = new BookingModel(88);
 
-        $booking->set("")
-        
+        $booking->set("booking_name", "Nguyen Tran Dat");
 
-        $booking->method('isAvailable')->willReturn(true);
-        $booking->expects($this->once())->method('extendDefaults');
+        $booking->update();
+        $this->assertTrue($booking->isAvailable());
+        $this->assertEquals("Nguyen Tran Dat", $booking->get("booking_name"));
+        $this->assertEquals(88, $booking->get("id"));
 
-        // Giả lập get() trả về dữ liệu cụ thể cho từng field
-        $booking->method('get')->willReturnMap([
-            ['id', 1],
-            ['doctor_id', 10],
-            ['patient_id', 20],
-            ['service_id', 5],
-            ['booking_name', 'John Doe'],
-            ['booking_phone', '123456789'],
-            ['name', 'John'],
-            ['gender', 'Male'],
-            ['birthday', '1990-01-01'],
-            ['address', '123 Test St'],
-            ['reason', 'Flu'],
-            ['appointment_date', '2025-04-10'],
-            ['appointment_time', '10:00'],
-            ['status', 'pending'],
-            ['create_at', '2025-04-01 10:00:00'],
-            ['update_at', '2025-04-01 10:10:00']
-        ]);
-
-        // Giả lập update query (tránh gọi DB thật)
-        DB::shouldReceive('table')
-            ->once()
-            ->with(TABLE_PREFIX.TABLE_BOOKINGS)
-            ->andReturnSelf();
-        
-        DB::shouldReceive('where')
-            ->once()
-            ->with('id', '=', 1)
-            ->andReturnSelf();
-        
-        DB::shouldReceive('update')
-            ->once()
-            ->andReturn(1); // giả lập update thành công
-
-        $result = $booking->update();
-
-        $this->assertSame($booking, $result);
+        $getBooking = DB::table(TABLE_PREFIX.TABLE_BOOKINGS)->where("id", "=", 88)->get();
+        $this->assertEquals(1, count($getBooking));
+        $this->assertEquals(88, $getBooking[0]->id);
+        $this->assertEquals("Nguyen Tran Dat", $getBooking[0]->booking_name);
     }
 
 
