@@ -16,7 +16,10 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src</directory>
+            <directory suffix=".php">api</directory>
         </whitelist>
     </filter>
+
+   
+
 </phpunit>

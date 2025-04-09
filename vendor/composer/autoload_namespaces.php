@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Viocon' => array($vendorDir . '/usmanhalalit/viocon/src'),
     'Pixie' => array($vendorDir . '/usmanhalalit/pixie/src'),
+    'Mockery' => array($vendorDir . '/mockery/mockery/library'),
 );

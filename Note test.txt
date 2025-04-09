@@ -10,5 +10,12 @@ composer dump-autoload -o
 --color: in mau bao loi
 --testdox: thong bao loi ro hon
 
-./vendor/bin/phpunit tests/Models/DoctorModelTest.php --color
-./vendor/bin/phpunit tests/Models/DoctorModelTest3.php --color
+./vendor/bin/phpunit tests/Module_10/Models/DoctorModelTest.php
+./vendor/bin/phpunit tests/Module_06/Models/AppointmentRecordModelTest.php
+./vendor/bin/phpunit tests/Module_06/Models/BookingPhotoModelTest.php
+./vendor/bin/phpunit tests/Module_06/Models/TreatmentModelTest.php
+
+Chạy đo độ phủ:
+phpunit --coverage-html coverage/
+phpunit --coverage-html coverage-report tests/Module_10/Models/DoctorModelTest.php
+

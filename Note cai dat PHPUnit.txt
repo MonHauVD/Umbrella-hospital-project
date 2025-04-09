@@ -18,5 +18,32 @@
 	
 Dependence
 composer require usmanhalalit/pixie
-composer require illuminate/database
 composer require --dev mockery/mockery
+
+
+composer require illuminate/database (có the chua cần)
+Cài xdebug
+(Hướng dẫn thủ công)
+1. Cài bản Xdebug 3.1.6 bản PHP 7.3 VC15 TS (64bit)
+	https://xdebug.org/files/php_xdebug-3.1.6-7.3-vc15-x86_64.dll
+2. Move the downloaded file to "<Nơi bạn cài xampp>\xampp\php\ext", and rename it to php_xdebug.dll
+3. Update D:\Data of Program file\xampp\php\php.ini and add the line:
+zend_extension = xdebug
+
+(Hướng dẫn tự động)
+1. Truy cập https://xdebug.org/wizard
+2. Làm theo hướng dẫn của trang web
+
+
+
+# Note
+	1. php -i | findstr "Architecture"
+		Kết quả x64 → bạn dùng bản 64-bit (Chọn)
+		Kết quả x86 → bạn dùng bản 32-bit
+	2. php -i | findstr "Thread"
+		Nếu thấy Thread Safety => enabled → chọn bản TS (Chọn)
+		Nếu thấy Thread Safety => disabled → chọn bản Non-TS
+	3. php -i | findstr "Compiler"
+		Kết quả thường là MSVC15 (Visual C++ 2017) → chọn bản VC15
+
+

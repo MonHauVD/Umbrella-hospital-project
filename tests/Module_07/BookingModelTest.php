@@ -21,7 +21,7 @@ class BookingModelTest extends TestCase
             'host'      => 'localhost',
             'database'  => 'doantotnghiep',
             'username'  => 'root',
-            'password'  => '123456',
+            'password'  => '',
             'charset'   => 'utf8',
             'options'   => [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
