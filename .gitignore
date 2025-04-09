@@ -7,4 +7,3 @@ composer.json
 composer.lock
 ConfigDefine.php
 api/app/config/db.config.php
-LocalConfigDB.php
