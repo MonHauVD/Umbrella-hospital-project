@@ -18,4 +18,7 @@ class FakeAuthUser {
     public function save() {
         return true;
     }
+    public function isAvailable() {
+        return true;
+    }
 }
