@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.5/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
+         bootstrap="tests/phpunit-bootstrap.php"
          forceCoversAnnotation="true"
          beStrictAboutCoversAnnotation="true"
          beStrictAboutOutputDuringTests="true"
@@ -17,10 +17,21 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">/api/app/models</directory>
+        
+            <directory suffix=".php">api</directory>
+
+            <exclude>
+                <directory >api/app/vendor</directory>
+                <directory >api/document</directory>
+                <directory >api/assets</directory>
+                <directory >api/tests</directory>
+                <file>api/app/inc/js-locale.inc.php</file>
+            </exclude>
         </whitelist>
     </filter>
 
-   
+
+
+
 
 </phpunit>

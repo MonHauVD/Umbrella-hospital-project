@@ -4,6 +4,8 @@
  * 
  * @author Onelab <hello@onelab.co>
  */
+use PHPMailer\PHPMailer\PHPMailer;
+
 class Email extends PHPMailer{
     /**
      * Email template html

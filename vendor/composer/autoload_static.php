@@ -55,6 +55,7 @@ class ComposerStaticInit638aeb3ef3eb7f7fba2f1c1820780286
             'Psr\\Clock\\' => 10,
             'Prophecy\\' => 9,
             'PHPStan\\PhpDocParser\\' => 21,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'I' => 
         array (
@@ -159,6 +160,10 @@ class ComposerStaticInit638aeb3ef3eb7f7fba2f1c1820780286
         'PHPStan\\PhpDocParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Illuminate\\Support\\' => 
         array (

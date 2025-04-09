@@ -56,6 +56,9 @@ $base_path = trim(str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"])), "/")
 $base_path = $base_path ? "/" . $base_path : "";
 define("BASEPATH", $base_path);
 
+if (!defined('ACTIVE_LANG')) {
+    define('ACTIVE_LANG', 'en');
+}
 
 // Required libraries, config files and helpers...
 require_once APPPATH.'/autoload.php';
