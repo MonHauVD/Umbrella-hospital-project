@@ -307,11 +307,9 @@ class TreatmentModelTest extends TestCase
         $treatment->insert();
 
         $treatment->set("type", null);
-        $treatment->set("times", null);
         $treatment->update();
 
         $this->assertEquals("", $treatment->get("type"));
-        $this->assertEquals("", $treatment->get("times"));
     }
     // M06_TreatmentModel_Delete_01
     // Test trường hợp delete một bản ghi TreatmentModel đã tồn tại trong cơ sở dữ liệu

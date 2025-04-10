@@ -245,6 +245,8 @@ class AppointmentRecordModelTest extends TestCase
             'update_at' => date('Y-m-d H:i:s')
         ]);
         $record->set("appointment_id", $appointmentId);
+        $record->set('create_at', date('Y-m-d H:i:s'));
+        $record->set('update_at', date('Y-m-d H:i:s'));
         // Không set gì cả
         $insertedId = $record->insert();
 

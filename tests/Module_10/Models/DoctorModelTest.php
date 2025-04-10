@@ -269,6 +269,7 @@ class DoctorModelTest extends TestCase
         if (!$existing) {
             self::$qb->table(TABLE_PREFIX . TABLE_DOCTORS)->insert([
                 'id' => $doctorId,
+                'room_id' => 1,
                 'name' => 'Initial Doctor',
                 'description' => 'Initial Description',
                 'speciality_id' => 1,
