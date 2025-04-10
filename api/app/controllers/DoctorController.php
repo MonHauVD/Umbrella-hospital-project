@@ -37,6 +37,26 @@
         }
         
 
+        private function getById1()
+        {
+            /**Step 1 */
+            $this->resp->result = 0;
+            $AuthUser = $this->getVariable("AuthUser");
+            $Route = $this->getVariable("Route");
+
+
+            /**Step 2 - check ID*/
+            if( !isset($Route->params->id) )
+            {
+                $this->resp->msg = "ID is required !";
+                $this->jsonecho();
+            }
+            else
+            {
+                $this->resp->msg = "ID is null";
+                $this->jsonecho();
+            }
+        }
         /**
          * @author Phong-Kaster
          * @since 12-10-2022

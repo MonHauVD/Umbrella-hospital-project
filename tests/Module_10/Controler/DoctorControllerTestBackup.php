@@ -70,7 +70,8 @@ class DoctorControllerTest extends TestCase
                  }));
         //Stop code when calling jsonecho method
         $this->controller->method('jsonecho')->will($this->returnCallback(function() {
-            return; // Ngừng thực thi phần còn lại của hàm
+            // return; // Ngừng thực thi phần còn lại của hàm
+            throw new Exception("jsonecho method called");
         }));
     }
 
@@ -113,7 +114,13 @@ class DoctorControllerTest extends TestCase
         $reflectionMethod->setAccessible(true); // Make the private method accessible
 
         // Call the private method under test
-        $reflectionMethod->invoke($this->controller);
+        try {
+            $reflectionMethod->invoke($this->controller);
+        } catch (Exception $e) {
+            // Handle the exception thrown by jsonecho method
+            // You can assert that the exception message is as expected if needed
+            $this->assertEquals("jsonecho method called", $e->getMessage());
+        }
 
         // Use ReflectionProperty to access the protected $resp property
         $reflectionProperty = new ReflectionProperty(DoctorController::class, 'resp');
