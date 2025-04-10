@@ -5,10 +5,10 @@ use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
 
 require_once __DIR__ . '/../../api/app/core/DataList.php';
-require_once __DIR__ . '/../../api/app/models/AppointmentsModel.php';
+require_once __DIR__ . '/../../api/app/models/PatientsModel.php';
 require_once __DIR__ . '/../../api/app/config/db.config.php';
 
-class AppoinmentsModel extends TestCase
+class PatientsModelTest extends TestCase
 {
     protected static $db;
     protected static $qb;
@@ -36,14 +36,14 @@ class AppoinmentsModel extends TestCase
     public function test_M08_AppoinmentModel_getAll_01()
     {
        
-        $booking = new AppointmentsModel();
+        $booking = new PatientsModel();
         $booking->fetchData();
         $count = count($booking->getData());
         $this->assertEquals(17, $count);
         
 
         // Verify in DB
-        $dbBooking = DB::table(TABLE_PREFIX.TABLE_APPOINTMENTS)->get();
+        $dbBooking = DB::table(TABLE_PREFIX.TABLE_PATIENTS)->get();
         $this->assertEquals(count($dbBooking), $count);
     }
 }
