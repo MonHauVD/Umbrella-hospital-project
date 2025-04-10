@@ -56,7 +56,7 @@ class AppointmentModelTest extends TestCase
         $this->assertEquals($dbBooking[0]->patient_name, $booking->get("patient_name"));
     }
 
-    // Test case lấy thông tin booking từ database với một id tồn tại
+    // Test case lấy thông tin booking từ database với một id không có trong db
     public function test_M08_AppointmentModel_select_02()
     {
         $ids = 999;
@@ -89,6 +89,7 @@ class AppointmentModelTest extends TestCase
     }
 
 
+    //Test case insert thành công với các trường hợp hợp lệ
     public function test_M08_AppointmentModel_insert_01()
     {
         // Arrange
@@ -129,6 +130,7 @@ class AppointmentModelTest extends TestCase
         $this->assertEquals( $booking->get("booking_id"), $fetchBooking->get("booking_id"));
     }
 
+    // Test case insert không thành công với các trường null
     public function test_M08_AppointmentModel_insert_02()
     {
         $this->expectException(PDOException::class);
@@ -164,6 +166,7 @@ class AppointmentModelTest extends TestCase
         $this->assertFalse( $booking->isAvailable());
     }
 
+    // Test case insert không thành công với patient_id không có trong db
     public function test_M08_AppointmentModel_insert_03()
     {
         $this->expectException(PDOException::class);
@@ -171,7 +174,7 @@ class AppointmentModelTest extends TestCase
         $booking = new AppointmentModel();
 
         $defaults = array(
-            "patient_id" => "99999",
+            "patient_id" => "99999",    // patient_id không có trong db
             "booking_id" => "88",
             "doctor_id" => "3",
             "patient_name" => "Kiều Phong",
@@ -199,6 +202,7 @@ class AppointmentModelTest extends TestCase
         $this->assertFalse( $booking->isAvailable());
     }
 
+    // Test case insert không thành công với booking_id không có trong db
     public function test_M08_AppointmentModel_insert_04()
     {
         $this->expectException(PDOException::class);
@@ -207,7 +211,7 @@ class AppointmentModelTest extends TestCase
 
         $defaults = array(
             "patient_id" => "4",
-            "booking_id" => "888888888",
+            "booking_id" => "888888888",        // booking_id không có trong db
             "doctor_id" => "3",
             "patient_name" => "Kiều Phong",
             "patient_birthday" => "2022-12-06",
@@ -234,6 +238,7 @@ class AppointmentModelTest extends TestCase
         $this->assertFalse( $booking->isAvailable());
     }
 
+    // Test case insert không thành công với doctor_id null
     public function test_M08_AppointmentModel_insert_05()
     {
         $this->expectException(PDOException::class);
@@ -272,7 +277,7 @@ class AppointmentModelTest extends TestCase
 
 
     // Kiểm tra nhánh returnn false được thực thi hay không
-    public function test_M07_AppointmentModel_update_01(){
+    public function test_M08_AppointmentModel_update_01(){
         $booking = new AppointmentModel();
         $res = $booking->update();
         $this->assertFalse($res);
@@ -280,7 +285,7 @@ class AppointmentModelTest extends TestCase
      
 
      //Mục tiêu: kiểm tra nhánh isAvailable == true, và kiểm tra kết quả return là $this
-     public function test_M07_AppointmentModel_update_02()
+     public function test_M08_AppointmentModel_update_02()
     {
         
         $booking = new AppointmentModel( 354);
@@ -301,7 +306,7 @@ class AppointmentModelTest extends TestCase
 
 
     // Kiểm tra nhánh returnn false được thực thi hay không
-    public function test_M07_AppointmentModel_delete_01(){
+    public function test_M08_AppointmentModel_delete_01(){
         $booking = new AppointmentModel();
         $res = $booking->delete();
         $this->assertFalse($res);
@@ -309,7 +314,7 @@ class AppointmentModelTest extends TestCase
      
 
      //Mục tiêu: kiểm tra nhánh isAvailable == true, và kiểm tra kết quả return là $this
-     public function test_M07_AppointmentModel_delete_02()
+     public function test_M08_AppointmentModel_delete_02()
     {
         
         $booking = new AppointmentModel(354);

@@ -5,10 +5,10 @@ use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
 
 require_once __DIR__ . '/../../api/app/core/DataList.php';
-require_once __DIR__ . '/../../api/app/models/AppointmentsModel.php';
+require_once __DIR__ . '/../../api/app/models/SpecialitiesModel.php';
 require_once __DIR__ . '/../../api/app/config/db.config.php';
 
-class AppoinmentsModel extends TestCase
+class SpecialitiesModelTest extends TestCase
 {
     protected static $db;
     protected static $qb;
@@ -31,19 +31,13 @@ class AppoinmentsModel extends TestCase
         self::$db->getPdoInstance()->rollback();
     }
 
-
-    // Test case lấy thông tin booking từ database với một id tồn tại
-    public function test_M08_AppoinmentModel_getAll_01()
+    public function test_M09_SpecialitiesModel_getAll_01()
     {
        
-        $booking = new AppointmentsModel();
-        $booking->fetchData();
-        $count = count($booking->getData());
-        $this->assertEquals(17, $count);
+        $specialitites = new SpecialitiesModel();
+        $specialitites->fetchData();
+        $this->assertEquals(12, $specialitites->getTotalCount());
         
-
-        // Verify in DB
-        $dbBooking = DB::table(TABLE_PREFIX.TABLE_APPOINTMENTS)->get();
-        $this->assertEquals(count($dbBooking), $count);
     }
+    
 }
