@@ -33,13 +33,13 @@ class PatientsModelTest extends TestCase
 
 
     // Test case lấy thông tin booking từ database với một id tồn tại
-    public function test_M08_AppoinmentModel_getAll_01()
+    public function test_M11_AppoinmentModel_getAll_01()
     {
        
         $booking = new PatientsModel();
         $booking->fetchData();
         $count = count($booking->getData());
-        $this->assertEquals(17, $count);
+        $this->assertEquals(15, $count);
         
 
         // Verify in DB

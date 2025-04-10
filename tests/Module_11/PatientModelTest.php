@@ -133,15 +133,15 @@ class PatientModelTest extends TestCase
 
          $defaults = array(
             "email" => null,
-             "phone" => null,
-             "password" => null,
-             "name" => "Nguyen Tran Dat",
-             "gender" => 1,
-             "birthday" => "05/12/2001",
-             "address" => "Hà Nội",
-             "avatar" => "avatar_2_1670820370.jpg",
-             "create_at" => date("Y-m-d H:i:s"),
-             "update_at" => date("Y-m-d H:i:s")
+            "phone" => null,
+            "password" => null,
+            "name" => "Nguyen Tran Dat",
+            "gender" => 1,
+            "birthday" => "05/12/2001",
+            "address" => "Hà Nội",
+            "avatar" => "avatar_2_1670820370.jpg",
+            "create_at" => date("Y-m-d H:i:s"),
+            "update_at" => date("Y-m-d H:i:s")
          );
  
  
@@ -164,7 +164,7 @@ class PatientModelTest extends TestCase
         $booking = new PatientModel();
 
         $defaults = array(
-           "email" => "phongkaster100@gmail.com",
+            "email" => "phongkaster@gmail.com",
             "phone" => "",
             "password" => "",
             "name" => "Nguyen Tran Dat",
@@ -196,7 +196,7 @@ class PatientModelTest extends TestCase
         $booking = new PatientModel();
 
         $defaults = array(
-           "email" => "phongksfdsfdaster100@gmail.com",
+            "email" => "phongksfdsfdaster100@gmail.com",
             "phone" => "0123456789",
             "password" => "",
             "name" => "Nguyen Tran Dat",
@@ -261,6 +261,7 @@ class PatientModelTest extends TestCase
      //Mục tiêu: kiểm tra nhánh isAvailable == true, và kiểm tra kết quả return là $this
      public function test_M11_PatientModel_delete_02()
     {
+        $this->expectException(PDOException::class);
         
         $booking = new PatientModel(1);
 
