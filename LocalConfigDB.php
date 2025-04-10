@@ -32,6 +32,7 @@ return [
     'database'  => 'doantotnghiep',
     'username'  => $hostUsername[$hostname] ?? $defaultUsername,
     'password'  => $hostPassword[$hostname] ?? $defaultPassword,
+
     'charset'   => 'utf8',
     'options'   => [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
