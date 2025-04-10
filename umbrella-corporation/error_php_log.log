@@ -1765,3 +1765,20 @@ Stack trace:
 #2 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
 #3 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
 #4 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\ConnectionAdapters\Mysql->doConnect(Arra in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[10-Apr-2025 02:54:08 UTC] PHP Notice:  Trying to get property 'result' of non-object in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\LoginController.php on line 50
+[10-Apr-2025 02:54:08 UTC] PHP Stack trace:
+[10-Apr-2025 02:54:08 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[10-Apr-2025 02:54:08 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[10-Apr-2025 02:54:08 UTC] PHP   3. LoginController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
+[10-Apr-2025 02:54:08 UTC] PHP   4. LoginController->login() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\LoginController.php:23
+[10-Apr-2025 02:57:30 UTC] PHP Notice:  Trying to get property 'result' of non-object in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php on line 243
+[10-Apr-2025 02:57:30 UTC] PHP Stack trace:
+[10-Apr-2025 02:57:30 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[10-Apr-2025 02:57:30 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[10-Apr-2025 02:57:30 UTC] PHP   3. App->auth() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:547
+[10-Apr-2025 02:57:34 UTC] PHP Notice:  Trying to get property 'result' of non-object in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\LoginController.php on line 50
+[10-Apr-2025 02:57:34 UTC] PHP Stack trace:
+[10-Apr-2025 02:57:34 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[10-Apr-2025 02:57:34 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[10-Apr-2025 02:57:34 UTC] PHP   3. LoginController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
+[10-Apr-2025 02:57:34 UTC] PHP   4. LoginController->login() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\LoginController.php:23
