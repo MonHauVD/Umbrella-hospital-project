@@ -34,10 +34,16 @@ class SpecialitiesModelTest extends TestCase
     public function test_M09_SpecialitiesModel_getAll_01()
     {
        
-        $specialitites = new SpecialitiesModel();
-        $specialitites->fetchData();
-        $this->assertEquals(12, $specialitites->getTotalCount());
-        
+        // Lấy tổng số bản ghi trong DB
+        $dbCount = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->count();
+
+        // Gọi model để fetch data
+        $specialities = new SpecialitiesModel();
+        $specialities->fetchData();
+
+        // So sánh số bản ghi model fetch được với DB
+        $this->assertEquals($dbCount, $specialities->getTotalCount());
+ 
     }
     
 }
