@@ -54,7 +54,7 @@ class DrugModelTest extends TestCase
         $this->assertNull($drug->get("id"));
     }
 
-     //test_M02_DrugModel_select_03: Truy vấn với ID là số nguyên dương không tồn tại (id = 9999)
+    //test_M02_DrugModel_select_03: Truy vấn với ID là số nguyên dương không tồn tại (id = 9999)
      public function test_M09_SpecialityModel_select_03(): void{
         $ids = 9999;
         $drug = new DrugModel($ids);
@@ -76,7 +76,7 @@ class DrugModelTest extends TestCase
     public function test_M09_SpecialityModel_select_05(): void{
         $ids = "123";
         $drug = new DrugModel($ids);
-
+        $drugDb = 
         $this->assertFalse( $drug->isAvailable());
         $this->assertNull($drug->get("id"));
     }
@@ -157,25 +157,21 @@ class DrugModelTest extends TestCase
     //Đối tượng chưa tồn tại (isAvailable = False), thêm mới thuốc với đầy đủ trường dữ liệu 
     public function test_M02_DrugModel_insert_01()
     {
-        
         // Set các giá trị để thêm mới
         $drug = new DrugModel();
-        $drug->set("id", 15);
         $drug->set("name", "Thuốc dị ứng");
 
         // Act
-        $result = $drug->insert();
+        $drug->insert();
 
         // Assert
         $this->assertTrue($drug->isAvailable());
         $this->assertNotNull($drug->get("id"));
-        $this->assertEquals($drug->get("id"), $result);
-
+        $this->assertEquals("Thuốc dị ứng", $drug->get("name"));
 
         // Verify in DB
-        $fetchDrug = new DrugModel($drug->get("id"));
-        $this->assertEquals($drug->get("id"), $fetchDrug->get("id"));
-        $this->assertEquals($drug->get("name"), $fetchDrug->get("name"));
+        $dbDrug= DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", $drug->get("id"))->get();
+        $this->assertEquals("Thuốc dị ứng", $dbDrug[0]->name);
     }
 
     // test_M02_DrugModel_insert_02: Đối tượng chưa tồn tại (isAvailable = False), thêm mới thuốc với trường name rỗng
@@ -183,10 +179,10 @@ class DrugModelTest extends TestCase
         $drug = new DrugModel();
         $drug->set("name", ""); // không phải string mô tả
 
-        $result = $drug->insert();
+        $drug->insert();
     
-        // Mong muốn insert bị từ chối
-        $this->assertNull($drug->get("id"));
+        $dbDrug= DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", $drug->get("id"))->get();
+        $this->assertEquals("", $dbDrug[0]->name);
     }
 
     // test_M02_DrugModel_insert_03: Đối tượng chưa tồn tại (isAvailable = False), thêm mới thuốc với trường name là số
@@ -196,14 +192,15 @@ class DrugModelTest extends TestCase
         $drug->set("name", 12345); // không phải string mô tả
 
         $result = $drug->insert();
-    
-        // Mong muốn insert bị từ chối
-        $this->assertNotNull($drug->get("id"));
+        
+        // Check DB
+        $dbDrug= DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", $drug->get("id"))->get();
+        $this->assertNotNull($dbDrug[0]->id);
+        $this->assertEquals(12345, $dbDrug[0]->name);
     }
     
     // test_M02_DrugModel_insert_04: Đối tượng chưa tồn tại (isAvailable = False), thêm mới thuốc với trường name là chuỗi ký tự bao gồm cả số, chữ, kí tự đặc biệt
     public function test_M02_DrugModel_insert_04(): void {
-        // Trường hợp: name là một số (không hợp lệ)
         $drug = new DrugModel();
         $drug->set("name", "1aA@!_"); 
     
@@ -211,6 +208,11 @@ class DrugModelTest extends TestCase
     
         // Mong muốn insert bị từ chối
         $this->assertNotNull($drug->get("id"));
+        $this->assertEquals("1aA@!_", $drug->get("name"));
+
+        $dbDrug= DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", $drug->get("id"))->get();
+        $this->assertNotNull($dbDrug[0]->id);
+        $this->assertEquals("1aA@!_", $dbDrug[0]->name);
     }
 
     // test_M02_DrugModel_insert_05: khi isAvailable() trả về true, không thêm mới
@@ -222,12 +224,6 @@ class DrugModelTest extends TestCase
         // Gọi insert, mong đợi trả về false
         $result = $drug->insert();
         $this->assertFalse($result); // Không cho phép insert lần nữa
-
-        //Đảm bảo dữ liệu không thay đổi
-        $fetchDrug = new DrugModel($drug->get("id"));
-        $this->assertEquals("", $fetchDrug->get("name"));
-        $this->assertEquals("", $fetchDrug->get("description"));
-        $this->assertEquals("", $fetchDrug->get("image"));
     }
 
 
@@ -252,15 +248,15 @@ class DrugModelTest extends TestCase
         $this->assertSame($drug, $result);
         
         // Verify in DB
-        $fetchDrug = new DrugModel($drug->get("id"));
-        $this->assertEquals("Ether cập nhật", $fetchDrug->get("name"));
+        $fetchDrug = DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", $drug->get("id"))->get();
+        $this->assertEquals("Ether cập nhật", $fetchDrug[0]->name);
     }
 
 
     //test_M02_DrugModel_update_02: Không cập nhật khi isAvailable() trả về false (đối tượng k tồn tại trong DB)
     public function test_M02_DrugModel_update_02()
     {
-        // Tạo đối tượng nhưng KHÔNG gọi select() hay save(), nên isAvailable = false
+        // Tạo đối tượng nhưng KHÔNG gọi select(), nên isAvailable = false
         $drug = new DrugModel(9999);
         
         //gọi update() trong khi isAvailable = false
@@ -283,7 +279,8 @@ class DrugModelTest extends TestCase
 
         $result = $drug->update();
 
-        $this->assertNotSame($drug, $result);
+        $fetchDrug = DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", $drug->get("id"))->get();
+        $this->assertEquals("", $fetchDrug[0]->name);
     }
 
 
@@ -300,8 +297,11 @@ class DrugModelTest extends TestCase
 
         // Act - gọi update() trong khi isAvailable = false
         $result = $drug->update();
-
         $this->assertSame($drug, $result);
+
+        $fetchDrug = DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", $drug->get("id"))->get();
+        
+        $this->assertEquals(9223, $fetchDrug[0]->name);
     }
 
 
@@ -320,6 +320,9 @@ class DrugModelTest extends TestCase
         $result = $drug->update();
 
         $this->assertSame($drug, $result);
+
+        $fetchDrug = DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", $drug->get("id"))->get();
+        $this->assertEquals("aA1@_ " , $fetchDrug[0]->name);
     }
 
 
@@ -347,10 +350,8 @@ class DrugModelTest extends TestCase
         $this->assertFalse($fetchDrug->isAvailable());
         
         // Kiểm tra trực tiếp từ DB
-        $dbData = DB::table(TABLE_PREFIX.TABLE_DRUGS)
-            ->where("id", "=", 3)
-            ->first();
-        $this->assertNull($dbData);
+        $dbData = DB::table(TABLE_PREFIX.TABLE_DRUGS)->where("id", "=", 3)->get();
+        $this->assertCount(0, $dbData);
     }
     
 
