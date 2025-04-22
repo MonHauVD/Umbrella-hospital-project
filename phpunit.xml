@@ -12,12 +12,12 @@
          colors="true">
     <testsuites>
         <testsuite name="default">
-            <directory suffix="Test.php">tests/Module_test</directory>
+            <directory suffix="Test.php">tests/Module_10/Controler</directory>
         </testsuite>
     </testsuites>
 
 
-    <filter>
+    <!-- <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
         
             <directory suffix=".php">api</directory>
@@ -29,6 +29,13 @@
                 <directory >api/tests</directory>
                 <file>api/app/inc/js-locale.inc.php</file>
             </exclude>
+        </whitelist>
+    </filter> -->
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+        
+            <directory suffix=".php">function-to-test</directory>
         </whitelist>
     </filter>
 

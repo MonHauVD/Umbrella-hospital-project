@@ -31,12 +31,18 @@ class DrugsModelTest extends TestCase
         self::$db->getPdoInstance()->rollback();
     }
 
-    public function test_M02_DrugsModel_getAll_01()
+    public function test_M09_SpecialitiesModel_getAll_01()
     {
        
-        $drugs = new DrugsModel();
-        $drugs->fetchData();
-        $this->assertEquals(14, $drugs->getTotalCount());
-        
+        // Lấy tổng số bản ghi trong DB
+        $dbCount = DB::table(TABLE_PREFIX.TABLE_DRUGS)->count();
+
+        // Gọi model để fetch data
+        $specialities = new DrugsModel();
+        $specialities->fetchData();
+
+        // So sánh số bản ghi model fetch được với DB
+        $this->assertEquals($dbCount, $specialities->getTotalCount());
+ 
     }
 }

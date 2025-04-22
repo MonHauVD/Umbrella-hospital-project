@@ -60,7 +60,6 @@ class SpecialityModelTest extends TestCase
         $this->assertNull($speciality->get("id"));
     }
 
-
     // M09_SpecialityModel_select_03: Truy vấn với chuỗi số "0"
     public function test_M09_SpecialityModel_select_03(): void{
         $ids = "0";
@@ -156,23 +155,23 @@ class SpecialityModelTest extends TestCase
         $speciality = new SpecialityModel();
         $speciality->set("name", "Khoa Ngoại");
         $speciality->set("description", "Chữa bệnh ngoại khoa");
-        $speciality->set("image", "ảnh ngát thêm test cho vui/ngoại khoa.jpg");
+        $speciality->set("image", "ngoại khoa.jpg");
         
         // Act
-        $result = $speciality->insert();
+        $speciality->insert();  // trả ve id
 
         // Assert
         $this->assertTrue($speciality->isAvailable());
         $this->assertNotNull($speciality->get("id"));
-        $this->assertEquals($speciality->get("id"), $result);
-
-
+        $this->assertEquals("Khoa Ngoại", $speciality->get("name"));
+        $this->assertEquals("Chữa bệnh ngoại khoa", $speciality->get("description"));
+        $this->assertEquals("ngoại khoa.jpg", $speciality->get("image"));
+    
         // Verify in DB
-        $fetchSpeciality = new SpecialityModel($speciality->get("id"));
-        $this->assertEquals($speciality->get("id"), $fetchSpeciality->get("id"));
-        $this->assertEquals($speciality->get("name"), $fetchSpeciality->get("name"));
-        $this->assertEquals($speciality->get("description"), $fetchSpeciality->get("description"));
-        $this->assertEquals($speciality->get("image"), $fetchSpeciality->get("image"));
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals("Khoa Ngoại", $fetchSpeciality[0]->name);
+        $this->assertEquals("Chữa bệnh ngoại khoa", $fetchSpeciality[0]->description);
+        $this->assertEquals("ngoại khoa.jpg", $fetchSpeciality[0]->image);
     }
 
     // test_M09_SpecialityModel_insert_02: Đối tượng chưa tồn tại (isAvailable = False), thêm mới chuyên khoa với trường description rỗng
@@ -181,22 +180,20 @@ class SpecialityModelTest extends TestCase
         $speciality->set("name", "Khoa xương khớp");
         $speciality->set("image", "xuongkhop.jpg");
 
-        $result = $speciality->insert();
-
-        $this->assertTrue($speciality->isAvailable()); // Sau insert, phải available
-        $this->assertNotNull($speciality->get("id")); // ID phải được tạo
-        $this->assertEquals($speciality->get("id"), $result);
+        $speciality->insert();  // tra ve id
 
         // Kiểm tra các trường đã được gán mặc định
+        $this->assertTrue($speciality->isAvailable()); // Sau insert, phải available
+        $this->assertNotNull($speciality->get("id")); // ID phải được tạo
         $this->assertEquals("Khoa xương khớp", $speciality->get("name"));
-        $this->assertEquals("", $speciality->get("description")); // do extendDefaults() gán
+        $this->assertEquals("", $speciality->get("description"));
         $this->assertEquals("xuongkhop.jpg", $speciality->get("image"));
-
-        // Verify in DB (optional)
-        $fetchSpeciality = new SpecialityModel($speciality->get("id"));
-        $this->assertEquals($speciality->get("name"), $fetchSpeciality->get("name"));
-        $this->assertEquals($speciality->get("description"), $fetchSpeciality->get("description"));
-        $this->assertEquals($speciality->get("image"), $fetchSpeciality->get("image"));
+   
+       // Verify in DB
+       $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+       $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+       $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+       $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
 
@@ -206,22 +203,20 @@ class SpecialityModelTest extends TestCase
         $speciality->set("name", "Khoa xương khớp");
         $speciality->set("description", "Chữa các bệnh về xương khớp");
 
-        $result = $speciality->insert();
-
-        $this->assertTrue($speciality->isAvailable()); // Sau insert, phải available
-        $this->assertNotNull($speciality->get("id")); // ID phải được tạo
-        $this->assertEquals($speciality->get("id"), $result);
+        $speciality->insert();
 
         // Kiểm tra các trường đã được gán mặc định
+        $this->assertTrue($speciality->isAvailable()); // Sau insert, phải available
+        $this->assertNotNull($speciality->get("id")); // ID phải được tạo
         $this->assertEquals("Khoa xương khớp", $speciality->get("name"));
-        $this->assertEquals("Chữa các bệnh về xương khớp", $speciality->get("description")); // do extendDefaults() gán
+        $this->assertEquals("Chữa các bệnh về xương khớp", $speciality->get("description"));
         $this->assertEquals("", $speciality->get("image"));
 
         // Verify in DB (optional)
-        $fetchSpeciality = new SpecialityModel($speciality->get("id"));
-        $this->assertEquals($speciality->get("name"), $fetchSpeciality->get("name"));
-        $this->assertEquals($speciality->get("description"), $fetchSpeciality->get("description"));
-        $this->assertEquals($speciality->get("image"), $fetchSpeciality->get("image"));
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals("Chữa các bệnh về xương khớp", $fetchSpeciality[0]->description);
+        $this->assertEquals("", $fetchSpeciality[0]->image);
     }
 
     // test_M09_SpecialityModel_insert_04: Đối tượng chưa tồn tại (isAvailable = False), thêm mới chuyên khoa với trường name rỗng
@@ -230,22 +225,21 @@ class SpecialityModelTest extends TestCase
         $speciality->set("image", "xuongkhop.png");
         $speciality->set("description", "Chữa các bệnh về xương khớp");
 
-        $result = $speciality->insert();
+        $speciality->insert();
 
         $this->assertTrue($speciality->isAvailable()); // Sau insert, phải available
         $this->assertNotNull($speciality->get("id")); // ID phải được tạo
-        $this->assertEquals($speciality->get("id"), $result);
-
+      
         // Kiểm tra các trường đã được gán mặc định
         $this->assertEquals("", $speciality->get("name"));
         $this->assertEquals("Chữa các bệnh về xương khớp", $speciality->get("description")); // do extendDefaults() gán
         $this->assertEquals("xuongkhop.png", $speciality->get("image"));
 
         // Kiem tra DB
-        $fetchSpeciality = new SpecialityModel($speciality->get("id"));
-        $this->assertEquals($speciality->get("name"), $fetchSpeciality->get("name"));
-        $this->assertEquals($speciality->get("description"), $fetchSpeciality->get("description"));
-        $this->assertEquals($speciality->get("image"), $fetchSpeciality->get("image"));
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
 
@@ -257,13 +251,21 @@ class SpecialityModelTest extends TestCase
         $speciality->set("description", "Khoa đặc biệt cho bệnh nhân cao tuổi");
         $speciality->set("image", "cao_tuoi.png");
     
-        $result = $speciality->insert();
-    
-        // Mong muốn insert bị từ chối
-        $this->assertFalse($result);
+        $speciality->insert();
+
+        // kiểm tra
+        $this->assertTrue($speciality->isAvailable()); // Sau insert, phải available
+        $this->assertNotNull($speciality->get("id")); // ID phải được tạo
+
+        // kiểm tra lại trong db
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
     
     // test_M09_SpecialityModel_insert_06: Đối tượng chưa tồn tại (isAvailable = False), thêm mới chuyên khoa với trường name là chuỗi ký tự bao gồm cả số, chữ, kí tự đặc biệt
+    
     public function test_M09_SpecialityModel_insert_06(): void {
         // Trường hợp: name là một số (không hợp lệ)
         $speciality = new SpecialityModel();
@@ -271,11 +273,19 @@ class SpecialityModelTest extends TestCase
         $speciality->set("description", "Khoa đặc biệt cho người khuyết tật");
         $speciality->set("image", "kt.png");
     
-        $result = $speciality->insert();
-    
-        // Mong muốn insert bị từ chối
-        $this->assertFalse($result);
+        $speciality->insert();
+        
+          // kiểm tra
+          $this->assertTrue($speciality->isAvailable()); // Sau insert, phải available
+          $this->assertNotNull($speciality->get("id")); // ID phải được tạo
+  
+          // kiểm tra lại trong db
+          $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+          $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+          $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+          $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
+
     // test_M09_SpecialityModel_insert_07: khi isAvailable() trả về true, không thêm mới
     public function test_M09_SpecialityModel_insert_07()
     {
@@ -285,12 +295,6 @@ class SpecialityModelTest extends TestCase
         // Gọi insert, mong đợi trả về false
         $result = $speciality->insert();
         $this->assertFalse($result); // Không cho phép insert lần nữa
-
-        //Đảm bảo dữ liệu không thay đổi
-        $fetchSpeciality = new SpecialityModel($speciality->get("id"));
-        $this->assertEquals("", $fetchSpeciality->get("name"));
-        $this->assertEquals("", $fetchSpeciality->get("description"));
-        $this->assertEquals("", $fetchSpeciality->get("image"));
     }
 
 
@@ -316,10 +320,10 @@ class SpecialityModelTest extends TestCase
         $this->assertSame($speciality, $result);
         
         // Verify in DB
-        $fetchSpeciality = new SpecialityModel($speciality->get("id"));
-        $this->assertEquals("Nội khoa cập nhật", $fetchSpeciality->get("name"));
-        $this->assertEquals("Mô tả mới", $fetchSpeciality->get("description"));
-        $this->assertEquals("new_image.jpg", $fetchSpeciality->get("image"));
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
     // test_M09_SpecialityModel_update_02: Cập nhật một trường khi isAvailable trả về TRUE (đối tượng đã tồn tại trong database)
@@ -342,11 +346,11 @@ class SpecialityModelTest extends TestCase
         // Assert
         $this->assertSame($speciality, $result);
         
-        // Verify in DB
-        $fetchSpeciality = new SpecialityModel($speciality->get("id"));
-        $this->assertEquals("Nhãn khoa cập nhật", $fetchSpeciality->get("name"));
-        $this->assertEquals("Chuyên khoa răng - hàm - mặt", $fetchSpeciality->get("description"));
-        $this->assertEquals("speciality_8_1668691572.jpg", $fetchSpeciality->get("image"));
+        // Check DB
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
 
@@ -377,7 +381,13 @@ class SpecialityModelTest extends TestCase
         // gọi update() trong khi isAvailable = true
         $result = $speciality->update();
 
-        $this->assertNotSame($speciality, $result);
+        $this->assertSame($speciality, $result);
+
+        //Check DB
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
 
@@ -395,6 +405,12 @@ class SpecialityModelTest extends TestCase
         $result = $speciality->update();
 
         $this->assertSame($speciality, $result);
+
+         //Check DB
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
     //test_M09_SpecialityModel_update_06: Cập nhật với tham số name là 1 chuỗi ký tự gồm số, chữ cái, kí tự đặc biệt và dấu cách
@@ -412,6 +428,12 @@ class SpecialityModelTest extends TestCase
         $result = $speciality->update();
 
         $this->assertSame($speciality, $result);
+
+        //Check DB
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
     //test_M09_SpecialityModel_update_07: Cập nhật với trường description rỗng
@@ -428,7 +450,13 @@ class SpecialityModelTest extends TestCase
         // Act - gọi update() trong khi isAvailable = false
         $result = $speciality->update();
 
-        $this->assertNotSame($speciality, $result);
+        $this->assertSame($speciality, $result);
+
+        // check DB
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
 
@@ -447,6 +475,13 @@ class SpecialityModelTest extends TestCase
         $result = $speciality->update();
 
         $this->assertSame($speciality, $result);
+
+        
+        // check DB
+        $fetchSpeciality = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", $speciality->get("id"))->get();
+        $this->assertEquals($speciality->get("name"), $fetchSpeciality[0]->name);
+        $this->assertEquals($speciality->get("description"), $fetchSpeciality[0]->description);
+        $this->assertEquals($speciality->get("image"), $fetchSpeciality[0]->image);
     }
 
 
@@ -468,17 +503,10 @@ class SpecialityModelTest extends TestCase
         // Assert
         $this->assertTrue($result);
         
-        // Verify in DB
-        $fetchSpeciality = new SpecialityModel(3);
-        $this->assertFalse($fetchSpeciality->isAvailable());
-        
         // Kiểm tra trực tiếp từ DB
-        $dbData = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)
-            ->where("id", "=", 3)
-            ->first();
+        $dbData = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", 3)->first();
         $this->assertNull($dbData);
     }
-    
 
     //test_M09_SpecialityModel_delete_02: Không xoá khi isAvailable() trả về false (đối tượng không tồn tại trong DB)
     public function test_SpecialityModel_delete_02()

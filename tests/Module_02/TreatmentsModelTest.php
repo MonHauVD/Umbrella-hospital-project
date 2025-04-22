@@ -31,12 +31,18 @@ class TreatmentsModelTest extends TestCase
         self::$db->getPdoInstance()->rollback();
     }
 
-    public function test_M02_TreatmentsModel_getAll_01()
+    public function test_M09_SpecialitiesModel_getAll_01()
     {
        
-        $treatments = new TreatmentsModel();
-        $treatments->fetchData();
-        $this->assertEquals(1, $treatments->getTotalCount());
+        // Lấy tổng số bản ghi trong DB
+        $dbCount = DB::table(TABLE_PREFIX.TABLE_TREATMENTS)->count();
+
+        // Gọi model để fetch data
+        $specialities = new TreatmentsModel();
+        $specialities->fetchData();
+
+        // So sánh số bản ghi model fetch được với DB
+        $this->assertEquals($dbCount, $specialities->getTotalCount());
     }
     
 }

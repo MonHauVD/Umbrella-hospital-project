@@ -31,11 +31,18 @@ class BookingPhotosModelTest extends TestCase
         self::$db->getPdoInstance()->rollback();
     }
 
-    public function test_M01_BookingPhotosModel_getAll_01()
+    public function test_M09_SpecialitiesModel_getAll_01()
     {
        
-        $bookingPhotos = new BookingPhotosModel();
-        $bookingPhotos->fetchData();
-        $this->assertEquals(16, $bookingPhotos->getTotalCount());
+        // Lấy tổng số bản ghi trong DB
+        $dbCount = DB::table(TABLE_PREFIX.TABLE_BOOKING_PHOTOS)->count();
+
+        // Gọi model để fetch data
+        $specialities = new BookingPhotosModel();
+        $specialities->fetchData();
+
+        // So sánh số bản ghi model fetch được với DB
+        $this->assertEquals($dbCount, $specialities->getTotalCount());
+ 
     }
 }
