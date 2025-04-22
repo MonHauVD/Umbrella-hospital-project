@@ -1782,3 +1782,39 @@ Stack trace:
 [10-Apr-2025 02:57:34 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
 [10-Apr-2025 02:57:34 UTC] PHP   3. LoginController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
 [10-Apr-2025 02:57:34 UTC] PHP   4. LoginController->login() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\LoginController.php:23
+[22-Apr-2025 12:12:30 UTC] PHP Notice:  Undefined variable: serviceId in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 166
+[22-Apr-2025 12:12:30 UTC] PHP Notice:  Undefined variable: doctorId in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 167
+[22-Apr-2025 20:58:21 UTC] PHP Notice:  Undefined variable: serviceId in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 166
+[22-Apr-2025 20:58:21 UTC] PHP Notice:  Undefined variable: doctorId in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 167
+[22-Apr-2025 23:11:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=ne...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\ve in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[22-Apr-2025 23:11:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=ne...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\ve in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[22-Apr-2025 23:11:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=ne...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\ve in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[22-Apr-2025 23:12:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=ne...', 'root', '', Array)
+#1 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\ve in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
