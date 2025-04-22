@@ -116,6 +116,7 @@ class BookingModelTest extends TestCase
         $this->assertNotNull( $booking->get("id"));
         // Verify in DB
         $fetchBooking = new BookingModel($booking->get("id"));
+        
         $this->assertEquals( $booking->get("id"), $fetchBooking->get("id"));
         $this->assertEquals( $booking->get("service_id"), $fetchBooking->get("service_id"));
         $this->assertEquals( $booking->get("doctor_id"), $fetchBooking->get("doctor_id"));
@@ -321,6 +322,7 @@ class BookingModelTest extends TestCase
         // $this->expectException(PDOException::class);
         $getBooking = DB::table(TABLE_PREFIX.TABLE_BOOKINGS)->where("id", "=", 88)->get();
         $this->assertEquals(0, count($getBooking));
+        //
         
     }
 }

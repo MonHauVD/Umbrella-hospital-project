@@ -1,4 +1,5 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 
 // Path to root directory of app.
@@ -35,3 +36,5 @@ define("ACTIVE_LANG", $active_lang);
 
 
 require __DIR__ . '/../vendor/autoload.php';
+
+

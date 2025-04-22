@@ -12,7 +12,7 @@
          colors="true">
     <testsuites>
         <testsuite name="default">
-            <directory suffix="Test.php">tests/Module_07</directory>
+            <directory suffix="Test.php">tests/Module_test</directory>
         </testsuite>
     </testsuites>
 
