@@ -17,7 +17,7 @@ Test up video 3
 
 Test up video 4
 
-[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[<img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" width="50%">](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 
 Test up video 5
