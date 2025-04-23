@@ -16,7 +16,8 @@
 0: Không xem đuợc
 ### Xemchuyenkhoa_001
 Issue 3:
-<video controls src="2025-04-23 21-35-21.mp4" title="Title"></video>
+https://github.com/user-attachments/assets/8fd17e81-5ccd-4efe-abf2-81fc9c914d0e
+
 
 Issue 10: 
 ![alt text](image-1.png)
