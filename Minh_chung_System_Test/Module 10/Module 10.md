@@ -19,7 +19,7 @@
     - [10\_ThemSuaXoaBacSi\_006](#10_themsuaxoabacsi_006)
     - [10\_ThemSuaXoaBacSi\_007](#10_themsuaxoabacsi_007)
     - [10\_ThemSuaXoaBacSi\_008](#10_themsuaxoabacsi_008)
-    - [10\_ThemSuaXoaBacSi\_009- Module 10](#10_themsuaxoabacsi_009--module-10)
+    - [10\_ThemSuaXoaBacSi\_009](#10_themsuaxoabacsi_009)
     - [10\_ThemSuaXoaBacSi\_011](#10_themsuaxoabacsi_011)
 
 ## Xem danh sách bác sĩ và chi tiết một bác sĩ
@@ -214,7 +214,7 @@ Thông báo viết bằng tiếng anh.
 Thông báo viết bằng tiếng anh.
 ![alt text](image-16.png)
 
-### 10_ThemSuaXoaBacSi_009- [Module 10](#module-10)
+### 10_ThemSuaXoaBacSi_009
 
 Không hiển thị thông báo gì dù thành công.
 
