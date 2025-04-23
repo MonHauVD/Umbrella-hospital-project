@@ -44,8 +44,8 @@ Issue 83: (Bấm để xem video)
 
 ## Taomoilichkham_007
 Issue 66: (Bấm để xem video)
-
 [<img src="https://img.youtube.com/vi/CPJ8taPi3xc/0.jpg" width="50%">](https://www.youtube.com/watch?v=CPJ8taPi3xc-wE)
+
 
 Issue 73:
 ![alt text](issue73.jpg)
