@@ -74,7 +74,8 @@ Issue 83: (Bâm để xem video)
 | Hệ thống báo lỗi thông tin không đầy đủ | N   | N   | N   | N   | N   | Y   |
 
 ## Taochuyenkhoa_001
-Issue 1: Hiển thị sai tên form
+Issue 1:
+
 ![alt text](image-5.png)
 
 
@@ -205,20 +206,21 @@ Issue 108: (Bấm để xem video)
 
 
 ## Chức năng Cập nhật chuyên khoa
-| **Điều kiện**                                                  | R1  | R2  | R3  | R4  | R5  | R6  | R7  |
-| -------------------------------------------------------------- | --- | --- | --- | --- | --- | --- | --- |
-| Người dùng đã đăng nhập                                        | Y   | Y   | Y   | Y   | Y   | N   | Y   |
-| Vai trò là admin                                               | Y   | Y   | Y   | Y   | N   | -   | -   |
-| Tài khoản đang hoạt động                                       | Y   | Y   | Y   | N   | -   | -   | -   |
-| Chuyên khoa tồn tại                                            | Y   | Y   | Y   | -   | -   | -   | N   |
-| Tên chuyên khoa mới không trùng (trả về description) trùng tên | Y   | Y   | N   | -   | -   | -   | -   |
-| **Hành động**                                                  |     |     |     |     |     |     |     |
-| Hiển thị cập nhật chuyên khoa thành công                       | Y   | N   | N   | N   | N   | N   | N   |
-| Hiển thị thông báo lỗi không có quyền                          | N   | N   | Y   | N   | Y   | N   | N   |
-| Hiển thị thông báo chuyên khoa không tồn tại                   | N   | N   | N   | Y   | N   | N   | Y   |
-| Hiển thị thông báo yêu cầu nhập tên                            | N   | Y   | N   | N   | N   | N   | N   |
-| Hiển thị thông báo yêu cầu nhập mô tả                          | N   | N   | N   | N   | N   | Y   | N   |
-
+| Cập nhật chuyên khoa                            |        |        |        |        |        |        |        |
+| ----------------------------------------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| **Điều kiện**                                   | **R1** | **R2** | **R3** | **R4** | **R5** | **R6** | **R7** |
+| Người dùng đã đăng nhập                         | Y      | Y      | Y      | Y      | Y      | Y      | N      |
+| Vai trò là admin                                | Y      | Y      | Y      | Y      | Y      | N      | -      |
+| Tài khoản đang hoạt động                        | Y      | Y      | Y      | Y      | N      | -      | -      |
+| Chuyên khoa tồn tại                             | Y      | Y      | Y      | N      | -      | -      | -      |
+| Tên chuyên khoa mới không trùng                 | Y      | Y      | N      | -      | -      | -      | -      |
+| Mô tả (description) không rỗng                  | Y      | N      | -      | -      | -      | -      | -      |
+| **Hành động**                                   |        |        |        |        |        |        |        |
+| Cho phép cập nhật chuyên khoa thành công        | Y      | N      | N      | N      | N      | N      | N      |
+| Hiển thị thông báo lỗi đăng nhập/không có quyền | N      | N      | N      | N      | Y      | Y      | Y      |
+| Hiển thị thông báo chuyên khoa không tồn tại    | N      | N      | N      | Y      | N      | N      | N      |
+| Hiển thị thông báo yêu cầu nhập tên             | N      | N      | Y      | N      | N      | N      | N      |
+| Hiển thị thông báo yêu cầu nhập mô tả           | N      | Y      | N      | N      | N      | N      | N      |
 ## Capnhatchuyenkhoa_001
 Issue 6: (Bấm để xem video)
 
