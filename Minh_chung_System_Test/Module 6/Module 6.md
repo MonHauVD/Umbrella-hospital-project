@@ -1,5 +1,48 @@
 # Module 6
 
+**Mục lục**
+- [Module 6](#module-6)
+  - [Xem danh sách khám bệnh trong phác đồ điều trị](#xem-danh-sách-khám-bệnh-trong-phác-đồ-điều-trị)
+    - [6\_XemDSKBTrongPhacDoDieuTri\_001](#6_xemdskbtrongphacdodieutri_001)
+    - [6\_XemDSKBTrongPhacDoDieuTri\_002](#6_xemdskbtrongphacdodieutri_002)
+    - [6\_XemDSKBTrongPhacDoDieuTri\_005](#6_xemdskbtrongphacdodieutri_005)
+    - [6\_XemDSKBTrongPhacDoDieuTri\_007](#6_xemdskbtrongphacdodieutri_007)
+    - [6\_XemDSKBTrongPhacDoDieuTri\_009](#6_xemdskbtrongphacdodieutri_009)
+    - [6\_XemDSKBTrongPhacDoDieuTri\_014](#6_xemdskbtrongphacdodieutri_014)
+    - [6\_XemDSKBTrongPhacDoDieuTri\_015](#6_xemdskbtrongphacdodieutri_015)
+  - [Xem chi tiết một phác đồ điều trị](#xem-chi-tiết-một-phác-đồ-điều-trị)
+    - [6\_XemChiTietPhacDoDieuTri\_001](#6_xemchitietphacdodieutri_001)
+    - [6\_XemChiTietPhacDoDieuTri\_002](#6_xemchitietphacdodieutri_002)
+    - [6\_XemChiTietPhacDoDieuTri\_003](#6_xemchitietphacdodieutri_003)
+    - [6\_XemChiTietPhacDoDieuTri\_004](#6_xemchitietphacdodieutri_004)
+  - [Tạo mới, sửa, xóa phác đồ điều trị (Đơn thuốc)](#tạo-mới-sửa-xóa-phác-đồ-điều-trị-đơn-thuốc)
+    - [6\_CUDDonThuoc\_001](#6_cuddonthuoc_001)
+    - [6\_CUDDonThuoc\_002](#6_cuddonthuoc_002)
+    - [6\_CUDDonThuoc\_003](#6_cuddonthuoc_003)
+    - [6\_CUDDonThuoc\_004](#6_cuddonthuoc_004)
+    - [6\_CUDDonThuoc\_005](#6_cuddonthuoc_005)
+    - [6\_CUDDonThuoc\_006](#6_cuddonthuoc_006)
+    - [6\_CUDDonThuoc\_007](#6_cuddonthuoc_007)
+    - [6\_CUDDonThuoc\_008](#6_cuddonthuoc_008)
+    - [6\_CUDDonThuoc\_009](#6_cuddonthuoc_009)
+    - [6\_CUDDonThuoc\_011](#6_cuddonthuoc_011)
+  - [Xem danh sách khám bệnh trong Quản lý bệnh án](#xem-danh-sách-khám-bệnh-trong-quản-lý-bệnh-án)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_001](#6_xemdanhsachkhambenhtrongquanlybenhan_001)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_002](#6_xemdanhsachkhambenhtrongquanlybenhan_002)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_003](#6_xemdanhsachkhambenhtrongquanlybenhan_003)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_005](#6_xemdanhsachkhambenhtrongquanlybenhan_005)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_006](#6_xemdanhsachkhambenhtrongquanlybenhan_006)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_007](#6_xemdanhsachkhambenhtrongquanlybenhan_007)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_008](#6_xemdanhsachkhambenhtrongquanlybenhan_008)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_009](#6_xemdanhsachkhambenhtrongquanlybenhan_009)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_010](#6_xemdanhsachkhambenhtrongquanlybenhan_010)
+    - [6\_XemDanhSachKhamBenhTrongQuanLyBenhAn\_011](#6_xemdanhsachkhambenhtrongquanlybenhan_011)
+  - [Tạo, sửa chi tiết một bệnh án](#tạo-sửa-chi-tiết-một-bệnh-án)
+    - [6\_TaoSuaBenhAn\_001](#6_taosuabenhan_001)
+    - [6\_TaoSuaBenhAn\_003](#6_taosuabenhan_003)
+    - [6\_TaoSuaBenhAn\_004](#6_taosuabenhan_004)
+
+
 ## Xem danh sách khám bệnh trong phác đồ điều trị
 
 - Thanh tìm kiếm:

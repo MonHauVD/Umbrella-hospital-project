@@ -1,5 +1,27 @@
 # Module 10
 
+**Mục lục**
+- [Module 10](#module-10)
+  - [Xem danh sách bác sĩ và chi tiết một bác sĩ](#xem-danh-sách-bác-sĩ-và-chi-tiết-một-bác-sĩ)
+    - [10\_XemDanhSachBacSi\_001](#10_xemdanhsachbacsi_001)
+    - [10\_XemDanhSachBacSi\_002](#10_xemdanhsachbacsi_002)
+    - [10\_XemDanhSachBacSi\_003](#10_xemdanhsachbacsi_003)
+    - [10\_XemDanhSachBacSi\_004](#10_xemdanhsachbacsi_004)
+    - [10\_XemDanhSachBacSi\_007](#10_xemdanhsachbacsi_007)
+    - [10\_XemDanhSachBacSi\_008](#10_xemdanhsachbacsi_008)
+    - [10\_XemDanhSachBacSi\_010](#10_xemdanhsachbacsi_010)
+  - [Thêm, sửa, xóa bác sĩ](#thêm-sửa-xóa-bác-sĩ)
+    - [10\_ThemSuaXoaBacSi\_001](#10_themsuaxoabacsi_001)
+    - [10\_ThemSuaXoaBacSi\_002](#10_themsuaxoabacsi_002)
+    - [10\_ThemSuaXoaBacSi\_003](#10_themsuaxoabacsi_003)
+    - [10\_ThemSuaXoaBacSi\_004](#10_themsuaxoabacsi_004)
+    - [10\_ThemSuaXoaBacSi\_005](#10_themsuaxoabacsi_005)
+    - [10\_ThemSuaXoaBacSi\_006](#10_themsuaxoabacsi_006)
+    - [10\_ThemSuaXoaBacSi\_007](#10_themsuaxoabacsi_007)
+    - [10\_ThemSuaXoaBacSi\_008](#10_themsuaxoabacsi_008)
+    - [10\_ThemSuaXoaBacSi\_009- Module 10](#10_themsuaxoabacsi_009--module-10)
+    - [10\_ThemSuaXoaBacSi\_011](#10_themsuaxoabacsi_011)
+
 ## Xem danh sách bác sĩ và chi tiết một bác sĩ
 
 - Thanh tìm kiếm:
@@ -192,7 +214,7 @@ Thông báo viết bằng tiếng anh.
 Thông báo viết bằng tiếng anh.
 ![alt text](image-16.png)
 
-### 10_ThemSuaXoaBacSi_009
+### 10_ThemSuaXoaBacSi_009- [Module 10](#module-10)
 
 Không hiển thị thông báo gì dù thành công.
 
