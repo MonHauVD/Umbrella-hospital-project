@@ -323,6 +323,10 @@ Sau khi chọn thì làm mất luôn dữ liệu trả về chỉ còn 5 mục t
 Danh sách bị nháy liên tục
 <video controls src="2025-04-23 05-12-08.mp4" title="Title"></video>
 
+
+https://github.com/user-attachments/assets/cdf80f3e-9b4f-4bdf-99fa-e3ab37eefa8a
+
+
 ## Tạo, sửa chi tiết một bệnh án
 
 - Trạng thái trước khám (Không bắt buộc):
