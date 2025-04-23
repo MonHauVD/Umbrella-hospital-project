@@ -8,3 +8,4 @@ composer.lock
 ConfigDefine.php
 api/app/config/db.config.php
 .idea
+.venv
