@@ -16,8 +16,8 @@
 0: Không xem đuợc
 ### Xemchuyenkhoa_001
 Issue 3:
-https://github.com/user-attachments/assets/8fd17e81-5ccd-4efe-abf2-81fc9c914d0e
 
+[<img src="https://img.youtube.com/vi/U0wBUiiCmVQ/0.jpg" width="50%">](https://www.youtube.com/watch?v=U0wBUiiCmVQ)
 
 Issue 10: 
 ![alt text](image-1.png)
@@ -233,8 +233,3 @@ Issue 83, 84:
 ## Capnhatchuyenkhoa_012
 Issue 104:
 <video controls src="2025-04-24 00-17-05.mp4" title="Title"></video>
-
-
-| stt | ten  | ngay |
-| --- | ---- | ---- |
-| 1   | Ngat | 123  |
