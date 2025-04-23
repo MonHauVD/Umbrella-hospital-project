@@ -1444,3 +1444,10 @@ Stack trace:
 [16-Apr-2025 23:16:36 Asia/Ho_Chi_Minh] PHP Warning:  Error while sending QUERY packet. PID=20776 in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php on line 152
 [22-Apr-2025 18:12:47 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
 [22-Apr-2025 18:12:51 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 22:15:46 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'name' at row 1 in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php:152
+Stack trace:
+#0 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php(152): PDOStatement->execute()
+#1 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php(325): Pixie\QueryBuilder\QueryBuilderHandler->statement('INSERT INTO `tn...', Array)
+#2 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php(356): Pixie\QueryBuilder\QueryBuilderHandler->doInsert(Array, 'insert')
+#3 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\models\SpecialityModel.php(96): Pixie\QueryBuilder\QueryBuilderHandler->insert(Array)
+#4 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\DataEntry.php(179): Special in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php on line 152
