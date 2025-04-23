@@ -4,6 +4,25 @@
 
 ### AbcMnq_001
 
+Test up video 1
+<video controls src="../Module 6/2025-04-23 05-12-08.mp4" title="Title"></video>
+
+Test up video 2
+
+<video controls src="[../Module 6/2025-04-23 05-12-08.mp4](https://github.com/MonHauVD/Umbrella-hospital-project/blob/32f40f7ec4a72906aae0fa642d83a00d58ae5baf/Minh_chung_System_Test/Module%206/2025-04-23%2005-12-08.mp4)" title="Title"></video>
+
+Test up video 3
+
+<video controls src="https://github.com/MonHauVD/Umbrella-hospital-project/blob/32f40f7ec4a72906aae0fa642d83a00d58ae5baf/Minh_chung_System_Test/Module%206/2025-04-23%2005-12-08.mp4" title="Title"></video>
+
+Test up video 4
+
+[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+
+Test up video 5
+
+
 1. ![Issue 7](image.png)
 2. ![Issue 10](image-1.png)
 3. ![alt text](image-4.png)
