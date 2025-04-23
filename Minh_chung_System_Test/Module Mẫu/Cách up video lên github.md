@@ -9,6 +9,8 @@ Bước 1: Ấn vào biểu tượng cây bút
 
 Bước 2: Kéo video từ thư mục vào đây
 
+**Lưu ý là Video không được quá 10MB và định dạng mp4**
+
 
 https://github.com/user-attachments/assets/2d3fd47a-f279-437c-86f3-6ace9a4bf750
 
