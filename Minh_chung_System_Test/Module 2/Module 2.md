@@ -12,7 +12,7 @@
 | Hiển thị thông báo lỗi "Không có kết nối mạng!"                      | N      | N      | Y      |
 
 ## Xemphacdo_004
-Issue 87:
+Issue 87: (Bấm để xem video)
 
 [<img src="https://img.youtube.com/vi/R7CTvTbP0GY/0.jpg" width="50%">](https://www.youtube.com/watch?v=R7CTvTbP0GY)
 
@@ -26,8 +26,9 @@ Issue 87:
 | Hiển thị hồ sơ bệnh án                                                    | Y      | N      | N      |
 | Hiển thị danh sách trống hoặc thông báo "Không có không có hồ sơ bệnh án" | N      | Y      | N      |
 | Hiển thị thông báo lỗi "Không có kết nối mạng!"                           | N      | N      | Y      |
+
 ## Xembenhan_004
-Issue 87:
+Issue 87:(Bấm để xem video)
 
 [<img src="https://img.youtube.com/vi/PRrfFWPIlSU/0.jpg" width="50%">](https://www.youtube.com/watch?v=PRrfFWPIlSU)
 
