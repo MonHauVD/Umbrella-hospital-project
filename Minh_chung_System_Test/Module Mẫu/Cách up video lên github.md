@@ -15,6 +15,7 @@ Nếu video lớn hơn 10MB thì bạn có thể up lên youtube và lấy link 
 [<img src="https://img.youtube.com/vi/<VIDEO_ID></VIDEO_ID>/0.jpg" width="50%">](https://www.youtube.com/watch?v=<VIDEO_ID>)
 
 Ví dụ 1 link video youtube
+
 [<img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" width="50%">](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 
