@@ -14,6 +14,9 @@ Bước 2: Kéo video từ thư mục vào đây
 Nếu video lớn hơn 10MB thì bạn có thể up lên youtube và lấy link video đó dán vào đây thay <VIDEO_ID> bằng ID video của bạn
 [<img src="https://img.youtube.com/vi/<VIDEO_ID></VIDEO_ID>/0.jpg" width="50%">](https://www.youtube.com/watch?v=<VIDEO_ID>)
 
+Ví dụ 1 link video youtube
+[<img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" width="50%">](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 
 https://github.com/user-attachments/assets/2d3fd47a-f279-437c-86f3-6ace9a4bf750
 
