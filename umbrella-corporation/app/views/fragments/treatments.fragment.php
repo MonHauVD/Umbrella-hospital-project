@@ -56,6 +56,7 @@
                                         <option selected="" value="Uống">Uống</option>
                                         <option value="Tiêm">Tiêm</option>
                                         <option value="Truyền nước">Truyền nước</option>
+                                        <option value="Nhỏ mắt">Nhỏ mắt</option>
                                     </select>
                                     <div class="invalid-feedback">Please select a valid state.</div>
                                 </div>
