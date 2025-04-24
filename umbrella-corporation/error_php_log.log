@@ -1790,3 +1790,68 @@ Stack trace:
 #2 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
 #3 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
 #4 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\ConnectionAdapters\ in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[23-Apr-2025 06:04:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php:138
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:dbname=ne...', 'root', '123456', Array)
+#1 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(138): ReflectionClass->newInstanceArgs(Array)
+#2 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php(110): Viocon\Container->instanciate('\\PDO', Array)
+#3 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\Mysql.php(28): Viocon\Container->build('\\PDO', Array)
+#4 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\pixie\src\Pixie\ConnectionAdapters\BaseAdapter.php(28): Pixie\ConnectionAdapters\ in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\vendor\usmanhalalit\viocon\src\Viocon\Container.php on line 138
+[22-Apr-2025 17:13:24 UTC] PHP Notice:  Trying to get property 'result' of non-object in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php on line 243
+[22-Apr-2025 17:13:24 UTC] PHP Stack trace:
+[22-Apr-2025 17:13:24 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[22-Apr-2025 17:13:24 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[22-Apr-2025 17:13:24 UTC] PHP   3. App->auth() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:547
+[22-Apr-2025 17:13:25 UTC] PHP Notice:  Trying to get property 'result' of non-object in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php on line 243
+[22-Apr-2025 17:13:25 UTC] PHP Stack trace:
+[22-Apr-2025 17:13:25 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[22-Apr-2025 17:13:25 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[22-Apr-2025 17:13:25 UTC] PHP   3. App->auth() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:547
+[22-Apr-2025 17:13:49 UTC] PHP Notice:  Trying to get property 'result' of non-object in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php on line 243
+[22-Apr-2025 17:13:49 UTC] PHP Stack trace:
+[22-Apr-2025 17:13:49 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[22-Apr-2025 17:13:49 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[22-Apr-2025 17:13:49 UTC] PHP   3. App->auth() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:547
+[22-Apr-2025 17:22:51 UTC] PHP Notice:  Undefined variable: serviceId in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 166
+[22-Apr-2025 17:22:51 UTC] PHP Stack trace:
+[22-Apr-2025 17:22:51 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[22-Apr-2025 17:22:51 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[22-Apr-2025 17:22:51 UTC] PHP   3. AppointmentController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
+[22-Apr-2025 17:22:51 UTC] PHP   4. AppointmentController->view() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\AppointmentController.php:33
+[22-Apr-2025 17:22:51 UTC] PHP   5. require_once() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\Controller.php:92
+[22-Apr-2025 17:22:51 UTC] PHP Notice:  Undefined variable: doctorId in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 167
+[22-Apr-2025 17:22:51 UTC] PHP Stack trace:
+[22-Apr-2025 17:22:51 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[22-Apr-2025 17:22:51 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[22-Apr-2025 17:22:51 UTC] PHP   3. AppointmentController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
+[22-Apr-2025 17:22:51 UTC] PHP   4. AppointmentController->view() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\AppointmentController.php:33
+[22-Apr-2025 17:22:51 UTC] PHP   5. require_once() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\Controller.php:92
+[23-Apr-2025 01:51:28 UTC] PHP Notice:  Undefined variable: serviceId in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 166
+[23-Apr-2025 01:51:28 UTC] PHP Stack trace:
+[23-Apr-2025 01:51:28 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[23-Apr-2025 01:51:28 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[23-Apr-2025 01:51:28 UTC] PHP   3. AppointmentController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
+[23-Apr-2025 01:51:28 UTC] PHP   4. AppointmentController->view() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\AppointmentController.php:33
+[23-Apr-2025 01:51:28 UTC] PHP   5. require_once() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\Controller.php:92
+[23-Apr-2025 01:51:28 UTC] PHP Notice:  Undefined variable: doctorId in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 167
+[23-Apr-2025 01:51:28 UTC] PHP Stack trace:
+[23-Apr-2025 01:51:28 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[23-Apr-2025 01:51:28 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[23-Apr-2025 01:51:28 UTC] PHP   3. AppointmentController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
+[23-Apr-2025 01:51:28 UTC] PHP   4. AppointmentController->view() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\AppointmentController.php:33
+[23-Apr-2025 01:51:28 UTC] PHP   5. require_once() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\Controller.php:92
+[23-Apr-2025 01:52:57 UTC] PHP Notice:  Undefined variable: serviceId in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 166
+[23-Apr-2025 01:52:57 UTC] PHP Stack trace:
+[23-Apr-2025 01:52:57 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[23-Apr-2025 01:52:57 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[23-Apr-2025 01:52:57 UTC] PHP   3. AppointmentController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
+[23-Apr-2025 01:52:57 UTC] PHP   4. AppointmentController->view() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\AppointmentController.php:33
+[23-Apr-2025 01:52:57 UTC] PHP   5. require_once() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\Controller.php:92
+[23-Apr-2025 01:52:57 UTC] PHP Notice:  Undefined variable: doctorId in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\views\appointment.php on line 167
+[23-Apr-2025 01:52:57 UTC] PHP Stack trace:
+[23-Apr-2025 01:52:57 UTC] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:0
+[23-Apr-2025 01:52:57 UTC] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\index.php:93
+[23-Apr-2025 01:52:57 UTC] PHP   3. AppointmentController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\App.php:574
+[23-Apr-2025 01:52:57 UTC] PHP   4. AppointmentController->view() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\controllers\AppointmentController.php:33
+[23-Apr-2025 01:52:57 UTC] PHP   5. require_once() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\umbrella-corporation\app\core\Controller.php:92
