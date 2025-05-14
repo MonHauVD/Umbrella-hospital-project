@@ -1442,6 +1442,384 @@ Stack trace:
 [10-Apr-2025 09:57:34 Asia/Ho_Chi_Minh] PHP   4. LoginController->login() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\LoginController.php:19
 [10-Apr-2025 09:57:34 Asia/Ho_Chi_Minh] PHP   5. LoginController->loginByDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\LoginController.php:59
 [16-Apr-2025 23:16:36 Asia/Ho_Chi_Minh] PHP Warning:  Error while sending QUERY packet. PID=20776 in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php on line 152
+<<<<<<< HEAD
+[22-Apr-2025 13:57:20 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 13:57:20 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 13:57:20 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 13:57:20 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 13:57:20 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 13:57:20 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 13:57:20 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 13:57:20 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 13:57:29 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 13:57:29 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 13:57:29 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 13:57:29 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 13:57:29 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 13:57:29 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 13:57:29 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 13:57:29 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:00:47 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:00:47 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:00:47 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:00:47 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:00:47 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:00:47 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:00:47 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:00:47 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:01:30 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:01:30 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:01:30 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:01:30 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:01:30 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:01:30 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:01:30 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:01:30 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:07:50 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:07:50 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:07:50 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:07:50 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:07:50 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:07:50 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:07:50 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:07:50 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:07:52 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:07:52 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:07:52 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:07:52 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:07:52 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:07:52 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:07:52 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:07:52 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:08:02 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:08:02 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:08:02 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:08:02 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:08:02 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:08:02 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:08:02 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:08:02 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:08:15 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:08:15 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:08:15 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:08:15 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:08:15 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:08:15 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:08:15 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:08:15 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:08:20 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:08:20 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:08:20 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:08:20 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:08:20 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:08:20 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:08:20 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:08:20 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:08:29 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:08:29 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:08:29 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:08:29 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:08:29 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:08:29 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:08:29 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:08:29 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:08:50 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:08:50 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:08:50 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:08:50 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:08:50 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:08:50 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:08:50 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:08:50 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:09:02 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:09:02 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:09:02 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:09:02 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:09:02 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:09:02 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:09:02 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:09:02 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:09:12 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:09:12 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:09:12 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:09:12 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:09:12 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:09:12 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:09:12 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:09:12 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:14:28 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:14:28 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:14:28 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:14:28 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:14:28 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:14:28 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:14:28 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:14:28 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:14:32 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:14:32 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:14:32 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:14:32 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:14:32 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:14:32 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:14:32 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:14:32 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:14:38 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:14:38 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:14:38 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:14:38 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:14:38 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:14:38 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:14:38 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:14:38 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:14:43 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:14:43 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:14:43 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:14:43 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:14:43 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:14:43 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:14:43 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:14:43 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:15:28 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:15:28 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:15:28 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:15:28 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:15:28 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:15:28 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:15:28 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:15:28 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:15:42 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:15:42 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:15:42 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:15:42 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:15:42 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:15:42 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:15:42 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:15:42 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:15:52 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:15:52 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:15:52 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:15:52 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:15:52 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:15:52 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:15:52 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:15:52 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:16:54 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:16:54 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:16:54 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:16:54 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:16:54 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:16:54 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:16:54 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:16:54 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[22-Apr-2025 14:16:59 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[22-Apr-2025 14:16:59 Asia/Ho_Chi_Minh] PHP Stack trace:
+[22-Apr-2025 14:16:59 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[22-Apr-2025 14:16:59 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[22-Apr-2025 14:16:59 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[22-Apr-2025 14:16:59 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[22-Apr-2025 14:16:59 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[22-Apr-2025 14:16:59 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:39:15 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:39:15 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:39:15 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:39:15 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:39:15 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:39:15 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:39:15 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:39:15 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:39:26 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:39:26 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:39:26 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:39:26 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:39:26 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:39:26 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:39:26 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:39:26 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:39:46 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:39:46 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:39:46 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:39:46 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:39:46 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:39:46 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:39:46 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:39:46 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:39:55 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:39:55 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:39:55 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:39:55 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:39:55 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:39:55 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:39:55 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:39:55 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:40:00 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:40:00 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:40:00 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:40:00 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:40:00 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:40:00 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:40:00 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:40:00 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:40:03 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:40:03 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:40:03 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:40:03 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:40:03 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:40:03 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:40:03 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:40:03 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:40:16 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:40:16 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:40:16 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:40:16 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:40:16 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:40:16 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:40:16 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:40:16 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:55:25 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:55:25 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:55:25 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:55:25 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:55:25 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:55:25 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:55:25 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:55:25 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:55:37 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:55:37 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:55:37 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:55:37 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:55:37 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:55:37 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:55:37 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:55:37 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:55:46 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:55:46 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:55:46 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:55:46 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:55:46 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:55:46 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:55:46 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:55:46 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:55:50 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:55:50 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:55:50 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:55:50 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:55:50 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:55:50 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:55:50 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:55:50 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:55:56 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:55:56 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:55:56 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:55:56 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:55:56 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:55:56 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:55:56 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:55:56 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:56:26 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:56:26 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:56:26 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:56:26 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:56:26 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:56:26 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:56:26 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:56:26 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:56:29 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:56:29 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:56:29 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:56:29 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:56:29 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:56:29 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:56:29 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:56:29 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:59:28 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:59:28 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:59:28 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:59:28 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:59:28 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:59:28 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:59:28 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:59:28 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:59:51 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:59:51 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:59:51 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:59:51 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:59:51 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:59:51 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:59:51 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:59:51 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 13:59:55 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 13:59:55 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 13:59:55 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 13:59:55 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 13:59:55 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 13:59:55 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 13:59:55 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 13:59:55 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 14:00:02 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 14:00:02 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 14:00:02 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 14:00:02 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 14:00:02 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 14:00:02 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 14:00:02 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 14:00:02 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 14:00:09 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 14:00:09 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 14:00:09 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 14:00:09 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 14:00:09 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 14:00:09 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 14:00:09 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 14:00:09 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 14:01:34 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 14:01:34 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 14:01:34 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 14:01:34 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 14:01:34 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 14:01:34 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 14:01:34 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 14:01:34 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 14:01:40 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 14:01:40 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 14:01:40 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 14:01:40 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 14:01:40 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 14:01:40 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 14:01:40 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 14:01:40 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 14:01:55 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 14:01:55 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 14:01:55 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 14:01:55 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 14:01:55 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 14:01:55 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 14:01:55 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 14:01:55 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 14:11:12 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 14:11:12 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 14:11:12 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 14:11:12 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 14:11:12 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 14:11:12 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 14:11:12 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 14:11:12 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 14:11:24 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 14:11:24 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 14:11:24 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 14:11:24 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 14:11:24 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 14:11:24 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 14:11:24 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 14:11:24 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+[23-Apr-2025 14:13:29 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
+[23-Apr-2025 14:13:29 Asia/Ho_Chi_Minh] PHP Stack trace:
+[23-Apr-2025 14:13:29 Asia/Ho_Chi_Minh] PHP   1. {main}() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:0
+[23-Apr-2025 14:13:29 Asia/Ho_Chi_Minh] PHP   2. App->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\index.php:72
+[23-Apr-2025 14:13:29 Asia/Ho_Chi_Minh] PHP   3. AppointmentsController->process() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\App.php:613
+[23-Apr-2025 14:13:29 Asia/Ho_Chi_Minh] PHP   4. AppointmentsController->newFlow() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:27
+[23-Apr-2025 14:13:29 Asia/Ho_Chi_Minh] PHP   5. AppointmentsController->getTheLaziestDoctor() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:879
+[23-Apr-2025 14:13:29 Asia/Ho_Chi_Minh] PHP   6. min() C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php:1105
+=======
 [22-Apr-2025 18:12:47 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
 [22-Apr-2025 18:12:51 Asia/Ho_Chi_Minh] PHP Warning:  min(): Array must contain at least one element in D:\Data of Program file\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\controllers\AppointmentsController.php on line 1105
 [23-Apr-2025 22:15:46 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'name' at row 1 in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php:152
@@ -1451,3 +1829,4 @@ Stack trace:
 #2 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php(356): Pixie\QueryBuilder\QueryBuilderHandler->doInsert(Array, 'insert')
 #3 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\models\SpecialityModel.php(96): Pixie\QueryBuilder\QueryBuilderHandler->insert(Array)
 #4 C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\core\DataEntry.php(179): Special in C:\xampp\htdocs\PTIT-Do-An-Tot-Nghiep\api\app\vendor\usmanhalalit\pixie\src\Pixie\QueryBuilder\QueryBuilderHandler.php on line 152
+>>>>>>> cd3edbdfd2ec77fe0257e472547a3d091b21d052
