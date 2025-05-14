@@ -9,7 +9,13 @@
          beStrictAboutOutputDuringTests="true"
          beStrictAboutTodoAnnotatedTests="true"
          verbose="false"
-         colors="true">
+         colors="true"
+         
+        convertWarningsToExceptions="false"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        stopOnFailure="false"
+         >
     <testsuites>
         <testsuite name="default">
             <directory suffix="Test.php">tests_total</directory>

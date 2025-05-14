@@ -32,7 +32,7 @@ require_once __DIR__ . '/../api/app/controllers/PatientProfileController.php';
 require_once __DIR__ . '/../api/app/controllers/LoginController.php';
 require_once __DIR__ . '/../api/app/controllers/LoginWithGoogleController.php';
 require_once __DIR__ . '/../tests_total/Module_04/helper/TestableHelperController4.php';
-require_once __DIR__ . '/../tests_total/Module_04/helper/FakeAuthUser4.php';
+
 require_once __DIR__ . '/../api/app/core/DataEntry.php';
 require_once __DIR__ . '/../api/app/core/Controller.php';
 require_once __DIR__ . '/../api/app/models/AppointmentRecordModel.php';
@@ -57,3 +57,4 @@ require_once __DIR__ . '/../api/app/models/PatientsModel.php';
 require_once __DIR__ . '/../tests_total/Module_12/helper/TestableHelperController12.php';
 
 require_once __DIR__ . '/../tests_total/Module_12/helper/FakeInput12.php';
+

@@ -488,7 +488,7 @@ class SpecialityModelTest extends TestCase
     {
         // Arrange
         // Tạo một record mới trước để test delete
-        $speciality = new SpecialityModel(3);
+        $speciality = new SpecialityModel(15);
         
         // Đảm bảo record đã được tạo
         $this->assertTrue($speciality->isAvailable());
@@ -501,7 +501,7 @@ class SpecialityModelTest extends TestCase
         $this->assertTrue($result);
         
         // Kiểm tra trực tiếp từ DB
-        $dbData = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", 3)->first();
+        $dbData = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", 15)->first();
         $this->assertNull($dbData);
     }
 

@@ -490,23 +490,29 @@ class SpecialityModelTest extends TestCase
     public function test_SpecialityModel_delete_01()
     {
         // Arrange
-        // Tạo một record mới trước để test delete
-        $speciality = new SpecialityModel(3);
-        
+        // Tạo chuyên khoa mới để đảm bảo không bị ràng buộc foreign key
+        $id = DB::table(TABLE_PREFIX . TABLE_SPECIALITIES)->insert([
+            'name' => 'Test Delete Speciality',
+            // các cột khác nếu cần
+        ]);
+
+        $speciality = new SpecialityModel($id);
+
         // Đảm bảo record đã được tạo
         $this->assertTrue($speciality->isAvailable());
-        $this->assertEquals("Nhi khoa", $speciality->get("name"));
-        
+        $this->assertEquals("Test Delete Speciality", $speciality->get("name"));
+
         // Act
         $result = $speciality->delete();
-        
+
         // Assert
         $this->assertTrue($result);
-        
+
         // Kiểm tra trực tiếp từ DB
-        $dbData = DB::table(TABLE_PREFIX.TABLE_SPECIALITIES)->where("id", "=", 3)->first();
+        $dbData = DB::table(TABLE_PREFIX . TABLE_SPECIALITIES)->where("id", $id)->first();
         $this->assertNull($dbData);
     }
+
 
     //test_M09_SpecialityModel_delete_02: Không xoá khi isAvailable() trả về false (đối tượng không tồn tại trong DB)
     public function test_SpecialityModel_delete_02()
