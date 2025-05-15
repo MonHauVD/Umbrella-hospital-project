@@ -41,6 +41,8 @@
     - [6\_TaoSuaBenhAn\_001](#6_taosuabenhan_001)
     - [6\_TaoSuaBenhAn\_003](#6_taosuabenhan_003)
     - [6\_TaoSuaBenhAn\_004](#6_taosuabenhan_004)
+  - [Kiểm tra lịch khám bệnh khi chức năng quản lý lịch hẹn tạo ra ứng với id Bác sĩ](#kiểm-tra-lịch-khám-bệnh-khi-chức-năng-quản-lý-lịch-hẹn-tạo-ra-ứng-với-id-bác-sĩ)
+    - [6\_KiemTraLienKet\_001](#6_kiemtralienket_001)
 
 
 ## Xem danh sách khám bệnh trong phác đồ điều trị
@@ -362,3 +364,10 @@ Thông báo bằng tiếng anh.
 
 Thông báo bằng tiếng anh.
 ![alt text](image-33.png)
+
+## Kiểm tra lịch khám bệnh khi chức năng quản lý lịch hẹn tạo ra ứng với id Bác sĩ
+
+### 6_KiemTraLienKet_001
+
+Có nhận được lịch hẹn đúng.
+![alt text](image-34.png)
